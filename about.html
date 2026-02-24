@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Claire</title>
+    <link rel="icon" type="image/x-icon" href="/img/myLogo.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globalstyle.css" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- SCRIPTS -->
+    <script src="scripts/button.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo"
+          ><img src="img/myLogo.png" alt="Logo"
+        /></a>
+        <div>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Works</a></li>
+            <!-- <li><a href="resume.html">Résumé</a></li> -->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <a href="" class="nav-social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M23.75 3.75C24.413 3.75 25.0489 4.01339 25.5178 4.48223C25.9866 4.95107 26.25 5.58696 26.25 6.25V23.75C26.25 24.413 25.9866 25.0489 25.5178 25.5178C25.0489 25.9866 24.413 26.25 23.75 26.25H6.25C5.58696 26.25 4.95107 25.9866 4.48223 25.5178C4.01339 25.0489 3.75 24.413 3.75 23.75V6.25C3.75 5.58696 4.01339 4.95107 4.48223 4.48223C4.95107 4.01339 5.58696 3.75 6.25 3.75H23.75ZM23.125 23.125V16.5C23.125 15.4192 22.6957 14.3828 21.9315 13.6185C21.1672 12.8543 20.1308 12.425 19.05 12.425C17.9875 12.425 16.75 13.075 16.15 14.05V12.6625H12.6625V23.125H16.15V16.9625C16.15 16 16.925 15.2125 17.8875 15.2125C18.3516 15.2125 18.7967 15.3969 19.1249 15.7251C19.4531 16.0533 19.6375 16.4984 19.6375 16.9625V23.125H23.125ZM8.6 10.7C9.15695 10.7 9.6911 10.4788 10.0849 10.0849C10.4788 9.6911 10.7 9.15695 10.7 8.6C10.7 7.4375 9.7625 6.4875 8.6 6.4875C8.03973 6.4875 7.50241 6.71007 7.10624 7.10624C6.71007 7.50241 6.4875 8.03973 6.4875 8.6C6.4875 9.7625 7.4375 10.7 8.6 10.7ZM10.3375 23.125V12.6625H6.875V23.125H10.3375Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="nav-social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M15 2.5C13.3585 2.5 11.733 2.82332 10.2165 3.45151C8.69989 4.07969 7.3219 5.00043 6.16117 6.16117C3.81696 8.50537 2.5 11.6848 2.5 15C2.5 20.525 6.0875 25.2125 11.05 26.875C11.675 26.975 11.875 26.5875 11.875 26.25V24.1375C8.4125 24.8875 7.675 22.4625 7.675 22.4625C7.1 21.0125 6.2875 20.625 6.2875 20.625C5.15 19.85 6.375 19.875 6.375 19.875C7.625 19.9625 8.2875 21.1625 8.2875 21.1625C9.375 23.0625 11.2125 22.5 11.925 22.2C12.0375 21.3875 12.3625 20.8375 12.7125 20.525C9.9375 20.2125 7.025 19.1375 7.025 14.375C7.025 12.9875 7.5 11.875 8.3125 10.9875C8.1875 10.675 7.75 9.375 8.4375 7.6875C8.4375 7.6875 9.4875 7.35 11.875 8.9625C12.8625 8.6875 13.9375 8.55 15 8.55C16.0625 8.55 17.1375 8.6875 18.125 8.9625C20.5125 7.35 21.5625 7.6875 21.5625 7.6875C22.25 9.375 21.8125 10.675 21.6875 10.9875C22.5 11.875 22.975 12.9875 22.975 14.375C22.975 19.15 20.05 20.2 17.2625 20.5125C17.7125 20.9 18.125 21.6625 18.125 22.825V26.25C18.125 26.5875 18.325 26.9875 18.9625 26.875C23.925 25.2 27.5 20.525 27.5 15C27.5 13.3585 27.1767 11.733 26.5485 10.2165C25.9203 8.69989 24.9996 7.3219 23.8388 6.16117C22.6781 5.00043 21.3001 4.07969 19.7835 3.45151C18.267 2.82332 16.6415 2.5 15 2.5Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="nav-social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M9.75 2.5H20.25C24.25 2.5 27.5 5.75 27.5 9.75V20.25C27.5 22.1728 26.7362 24.0169 25.3765 25.3765C24.0169 26.7362 22.1728 27.5 20.25 27.5H9.75C5.75 27.5 2.5 24.25 2.5 20.25V9.75C2.5 7.82718 3.26384 5.98311 4.62348 4.62348C5.98311 3.26384 7.82718 2.5 9.75 2.5ZM9.5 5C8.30653 5 7.16193 5.47411 6.31802 6.31802C5.47411 7.16193 5 8.30653 5 9.5V20.5C5 22.9875 7.0125 25 9.5 25H20.5C21.6935 25 22.8381 24.5259 23.682 23.682C24.5259 22.8381 25 21.6935 25 20.5V9.5C25 7.0125 22.9875 5 20.5 5H9.5ZM21.5625 6.875C21.9769 6.875 22.3743 7.03962 22.6674 7.33265C22.9604 7.62567 23.125 8.0231 23.125 8.4375C23.125 8.8519 22.9604 9.24933 22.6674 9.54235C22.3743 9.83538 21.9769 10 21.5625 10C21.1481 10 20.7507 9.83538 20.4576 9.54235C20.1646 9.24933 20 8.8519 20 8.4375C20 8.0231 20.1646 7.62567 20.4576 7.33265C20.7507 7.03962 21.1481 6.875 21.5625 6.875ZM15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75ZM15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25Z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <img src="img/ABOUTHERO.png" alt="" class="hero-bg" />
+
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <div class="hero-bio">
+              <p>
+                Aspiring web developer and UI/UX designer, crafting purposeful
+                digital experiences with clarity and creativity.
+              </p>
+            </div>
+
+            <div class="hero-main-title">
+              <h1 class="left-heading">KNOW MY</h1>
+              <h1 class="big-cursive">Story</h1>
+            </div>
+
+            <div class="hero-tagline">
+              <p><span class="small-cursive">Design </span> with Purpose,</p>
+              <p class="indent-code">
+                <span class="small-cursive">Code </span> with Clarity
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT MAIN CONTENT -->
+      <section class="about-me">
+        <!-- MAIN IMAGES -->
+        <div class="main-images-container">
+          <h1 class="claire-title">CLAIRE</h1>
+          <h1 class="gania-title">Gania</h1>
+
+          <div class="img-box left-box">
+            <img src="img/about-left.png" alt="" />
+          </div>
+          <div class="img-box middle-box">
+            <img src="img/about-main.png" alt="" />
+          </div>
+          <div class="img-box right-box">
+            <img src="img/about-right.png" alt="" />
+          </div>
+        </div>
+
+        <div class="about-text-columns">
+          <div class="column">
+            <p>
+              Mabuhay! I am Claire, an aspiring web developer passionate about
+              programming and crafting meaningful websites and applications that
+              shape the world of technology. I’m also a UI/UX designer and
+              full‑stack developer in progress, with a love for classical music,
+              art, lavender, lily of the valley, and reading the Bible. Beyond
+              tech, I enjoy writing about the beauty of life.
+            </p>
+            <br />
+            <p>
+              Currently in my 3rd year at Holy Angel University, I pursue my
+              journey in tech with curiosity and purpose. Growing up in a
+              Christian family devoted to ministry has shaped my values and
+              continues to guide the way I approach my work. I find joy in food
+              trips with friends, family, or even solo adventures, and in the
+              simple, meaningful moments of everyday life.
+            </p>
+          </div>
+
+          <div class="column">
+            <p>
+              I aspire to become a full‑stack developer and UI/UX designer,
+              crafting purposeful digital experiences that solve real‑world
+              problems with creativity and clarity. I thrive on blending design
+              and code to build interfaces that feel intuitive and inspiring. My
+              mission is to connect people through advancing technology, and my
+              vision is to serve real needs. Inspired by art, music, and
+              storytelling, I weave these influences into the digital space. For
+              me, every project is an opportunity to learn, refine, and create
+              with intention — because I believe in design that resonates and
+              code that empowers.
+            </p>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL IMAGES -->
+        <div class="collage-container">
+          <img src="img/collage-img1.png" alt="" class="img-box small-box b1" />
+          <img src="img/collage-img2.png" alt="" class="img-box small-box b2" />
+          <img src="img/collage-img3.png" alt="" class="img-box small-box b3" />
+          <img src="img/collage-img4.png" alt="" class="img-box small-box b4" />
+          <img src="img/collage-img5.png" alt="" class="img-box small-box b5" />
+        </div>
+      </section>
+
+      <!-- SOFT SKILLS -->
+      <section class="softskills-wrapper">
+        <div class="soft-start">
+          <h2><span class="cursive">Soft </span> Skills</h2>
+          <p>Interpersonal skills that define my professional style.</p>
+        </div>
+
+        <div class="soft-skills">
+          <div class="left-skills">
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>01.</h2>
+                <p>Team Leader</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I thrive in leading teams by fostering a collaborative
+                  environment where every member feels heard and motivated to
+                  achieve our collective goals.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>02.</h2>
+                <p>Interpersonal Skills</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I focus on building strong professional relationships through
+                  active listening and effective empathy to ensure a harmonious
+                  work environment.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>03.</h2>
+                <p>Problem Solving</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I approach challenges with a logical mindset, breaking down
+                  complex issues into manageable steps to find efficient and
+                  creative solutions.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>04.</h2>
+                <p>Teamwork & Collaboration</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  Collaboration is at the heart of my work. I enjoy sharing
+                  ideas and contributing to a group dynamic to produce better
+                  outcomes.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="right-skills">
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>05.</h2>
+                <p>Attention to Details</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I maintain a high standard of accuracy in my work, ensuring
+                  that even the smallest elements are polished and error-free.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>06.</h2>
+                <p>Goal-Oriented</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I am driven by results and keep a clear focus on objectives,
+                  ensuring that every task contributes to the final project
+                  success.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>07.</h2>
+                <p>Punctual</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  Time management is a priority for me. I consistently meet
+                  deadlines and value the schedules of my colleagues and
+                  clients.
+                </p>
+              </div>
+            </details>
+
+            <details class="softskill-item">
+              <summary class="softskill-header">
+                <h2>08.</h2>
+                <p>Communication Skills</p>
+                <span class="line-separator"></span>
+              </summary>
+              <div class="softskill-content">
+                <p>
+                  I pride myself on clear and concise communication, whether
+                  through writing, speaking, or visual presentation.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="technicalskills-wrapper">
+        <div class="technical-start">
+          <h2 class="left-side">
+            <span class="cursive">Technical </span> Skills
+          </h2>
+          <p class="right-side">
+            Front‑end and back‑end development with modern tools.
+          </p>
+        </div>
+
+        <!-- FRONTEND & FRAMEWORKS -->
+        <div class="frontend-lists">
+          <h3>FRONTEND & FRAMEWORKS</h3>
+          <span class="line-divider"></span>
+
+          <div class="frontend-skill">
+            <img src="" alt="HTML Icon" />
+            <p class="leftside">HTML</p>
+            <p class="rightside">98%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="frontend-skill">
+            <img src="" alt="CSS Icon" />
+            <p class="leftside">CSS</p>
+            <p class="rightside">90%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="frontend-skill">
+            <img src="" alt="JavaScript Icon" />
+            <p class="leftside">JavaScript</p>
+            <p class="rightside">90%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="frontend-skill">
+            <img src="" alt="Angular Icon" />
+            <p class="leftside">Angular</p>
+            <p class="rightside">95%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="frontend-skill">
+            <img src="" alt="Vue Icon" />
+            <p class="leftside">Vue</p>
+            <p class="rightside">95%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="frontend-skill">
+            <img src="" alt="Flutter Icon" />
+            <p class="leftside">Flutter</p>
+            <p class="rightside">80%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="backend-lists">
+          <h3>BACKEND & DATABASES</h3>
+          <span class="line-divider"></span>
+
+          <div class="backend-skill">
+            <img src="" alt="Java Icon" />
+            <p class="leftside">Java</p>
+            <p class="rightside">93%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="Python Icon" />
+            <p class="leftside">Python</p>
+            <p class="rightside">93%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="PHP Icon" />
+            <p class="leftside">PHP</p>
+            <p class="rightside">80%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="Express.js Icon" />
+            <p class="leftside">Express.js</p>
+            <p class="rightside">93%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="Node.js Icon" />
+            <p class="leftside">Node.js</p>
+            <p class="rightside">93%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="MongoDB Icon" />
+            <p class="leftside">MongoDB</p>
+            <p class="rightside">89%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="backend-skill">
+            <img src="" alt="MySQL Icon" />
+            <p class="leftside">MySQL</p>
+            <p class="rightside">84%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+        </div>
+
+        <!-- DESIGN -->
+        <div class="design-lists">
+          <h3>DESIGN</h3>
+          <span class="line-divider"></span>
+
+          <div class="design-skill">
+            <img src="" alt="Figma Icon" />
+            <p class="leftside">Figma</p>
+            <p class="rightside">100%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+
+          <div class="design-skill">
+            <img src="" alt="Canva Icon" />
+            <p class="leftside">Canva</p>
+            <p class="rightside">93%</p>
+            <div class="slider"><div class="slider-fill"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter-wrapper">
+        <div class="newsletter-start">
+          <h1>LET'S <span class="cursive">get in</span> TOUCH</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="90"
+            height="90"
+            viewBox="0 0 90 90"
+            fill="none"
+          >
+            <path
+              d="M63.75 67.5C62.7554 67.5 61.8016 67.1049 61.0983 66.4017C60.3951 65.6984 60 64.7446 60 63.75V30H26.25C25.2554 30 24.3016 29.6049 23.5984 28.9016C22.8951 28.1984 22.5 27.2446 22.5 26.25C22.5 25.2554 22.8951 24.3016 23.5984 23.5984C24.3016 22.8951 25.2554 22.5 26.25 22.5H63.75C64.7446 22.5 65.6984 22.8951 66.4017 23.5984C67.1049 24.3016 67.5 25.2554 67.5 26.25V63.75C67.5 64.7446 67.1049 65.6984 66.4017 66.4017C65.6984 67.1049 64.7446 67.5 63.75 67.5Z"
+            />
+            <path
+              d="M26.2499 67.4998C25.5084 67.4997 24.7835 67.2796 24.167 66.8676C23.5504 66.4555 23.0699 65.8699 22.7861 65.1848C22.5024 64.4996 22.4281 63.7458 22.5727 63.0184C22.7174 62.2911 23.0744 61.623 23.5987 61.0986L61.0987 23.5986C61.8059 22.9155 62.7532 22.5375 63.7364 22.546C64.7197 22.5546 65.6602 22.949 66.3555 23.6442C67.0508 24.3395 67.4452 25.2801 67.4537 26.2633C67.4623 27.2466 67.0843 28.1938 66.4012 28.9011L28.9012 66.4011C28.1981 67.1044 27.2444 67.4996 26.2499 67.4998Z"
+            />
+          </svg>
+        </div>
+
+        <form action="#" class="newsletter-form">
+          <div class="input-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Message" required />
+          </div>
+
+          <button type="submit" class="work-with-me-btn">
+            <span class="cursive-button">Work with Me</span>
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© All Rights Reserved. Created by Gania, Elisha Claire A.</p>
+    </footer>
+
+    <button id="scrollToTop" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>

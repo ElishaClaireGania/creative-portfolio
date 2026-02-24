@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Colors */
+  --mainbackground: linear-gradient(180deg, #f0e6f5 0%, #9e83b8 100%);
+  --midnightorchid: #392347;
+  --duskylilac: #6d5881;
+  --botanicalgreen: #1b4c16;
+  --irismist: #b8a3c2;
+  --plumblossom: #d0c4d8;
+  --lightpurple: #f0e6f5;
+
+  /* Font-styles */
+  --maincursive: "Great Vibes", cursive;
+  --secondarycursive: "Parisienne", cursive;
+  --h1: "Montserrat", sans-serif;
+  --bodytext_buttons: "Raleway", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+}
+
+/* ============ NAVIGATION ============ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+/* Logo */
+nav > a:first-child {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+nav > a img {
+  height: 100px;
+  width: auto;
+  padding: 10px 0;
+}
+
+nav div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  margin-right: auto;
+}
+
+nav div:first-of-type ul {
+  display: flex;
+  list-style: none;
+  gap: 6rem;
+}
+
+nav div:last-of-type ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin-left: 7rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  gap: 2.5rem;
+}
+
+nav div:first-of-type ul li a {
+  text-decoration: none;
+  color: var(--lightpurple);
+  font-family: var(--bodytext_buttons);
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-social-link svg {
+  fill: var(--lightpurple);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+nav div:first-of-type ul li a:hover {
+  color: var(--plumblossom);
+  transform: translateY(-2px);
+}
+
+.nav-social-link:hover svg {
+  fill: var(--plumblossom);
+}
+
+nav > a:first-child:hover {
+  transform: none;
+}
+
+/* ============ BODY ============ */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--mainbackground);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--mainbackground);
+  background-attachment: fixed;
+}
+
+/* ============ MAIN ============ */
+main {
+  margin: 0;
+}
+
+/* ============ FOOTER  ============ */
+footer {
+  margin-top: 0;
+  padding: 20px 10%;
+  width: 100%;
+  background-color: var(--midnightorchid);
+  color: var(--plumblossom);
+  font-family: var(--bodytext_buttons);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --- Scroll To Top Button --- */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--botanicalgreen);
+  color: var(--lightpurple);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#scrollToTop.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollToTop:hover {
+  background-color: var(--duskylilac);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(109, 88, 129, 0.4);
+  color: var(--lightpurple);
+}
