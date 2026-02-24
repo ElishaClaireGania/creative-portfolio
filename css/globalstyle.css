@@ -9,6 +9,7 @@
   --irismist: #b8a3c2;
   --plumblossom: #d0c4d8;
   --lightpurple: #f0e6f5;
+  --midpurple: #9e83b8;
 
   /* Font-styles */
   --maincursive: "Great Vibes", cursive;
@@ -34,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
+  padding: 0 7%;
 }
 
 /* Logo */
@@ -61,14 +62,14 @@ nav div:first-child {
 nav div:first-of-type ul {
   display: flex;
   list-style: none;
-  gap: 6rem;
+  gap: 8rem;
 }
 
 nav div:last-of-type ul {
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin-left: 7rem;
+  margin-left: 8rem;
 }
 
 nav ul {
@@ -154,7 +155,7 @@ footer {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: var(--botanicalgreen);
+  background: var(--duskylilac);
   color: var(--lightpurple);
   border: none;
   cursor: pointer;
@@ -174,8 +175,21 @@ footer {
 }
 
 #scrollToTop:hover {
-  background-color: var(--duskylilac);
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(109, 88, 129, 0.4);
-  color: var(--lightpurple);
+}
+
+/* GLOBAL MARGIN */
+main > section,
+footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 7%;
+  padding-right: 7%;
+  box-sizing: border-box;
+}
+
+main > section {
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -1,0 +1,16 @@
+:root {
+  /* Colors */
+  --mainbackground: linear-gradient(180deg, #f0e6f5 0%, #9e83b8 100%);
+  --midnightorchid: #392347;
+  --duskylilac: #6d5881;
+  --botanicalgreen: #1b4c16;
+  --irismist: #b8a3c2;
+  --plumblossom: #d0c4d8;
+  --lightpurple: #f0e6f5;
+
+  /* Font-styles */
+  --maincursive: "Great Vibes", cursive;
+  --secondarycursive: "Parisienne", cursive;
+  --h1: "Montserrat", sans-serif;
+  --bodytext_buttons: "Raleway", sans-serif;
+}
