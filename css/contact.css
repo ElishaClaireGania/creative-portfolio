@@ -8,8 +8,6 @@
   --plumblossom: #d0c4d8;
   --lightpurple: #f0e6f5;
 
-  /* Font-sizes */
-
   /* Font-styles */
   --maincursive: "Great Vibes", cursive;
   --secondarycursive: "Parisienne", cursive;
@@ -87,13 +85,13 @@
   flex: auto;
 }
 
-/* ============ THE DECORATIVE LINES ============ */
+/* THE DECORATIVE LINES */
 .horizontal-line {
   position: absolute;
   left: 0;
   top: 55%;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: var(--lightpurple);
   opacity: 1;
 }
@@ -102,7 +100,7 @@
   position: absolute;
   right: 18%;
   top: 0;
-  width: 1px;
+  width: 2px;
   height: 100%;
   background-color: var(--lightpurple);
   opacity: 1;

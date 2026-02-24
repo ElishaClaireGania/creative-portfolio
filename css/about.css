@@ -20,31 +20,31 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
   overflow: hidden;
 }
 
-.hero-bg {
-  position: relative;
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
+  height: 100%;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.3) 0%, transparent 20%),
+    radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.3) 0%, transparent 20%);
+  pointer-events: none;
   z-index: 1;
-  /* animation: rippleEffect 5s ease-in-out infinite; */
 }
 
-/* @keyframes rippleEffect {
-  0%,
-  100% {
-    filter: brightness(1) contrast(1) blur(0px);
-    transform: scale(1);
-  }
-  50% {
-    filter: brightness(1.1) contrast(1.05) blur(1px);
-    transform: scale(1.02);
-  }
-} */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.05);
+  object-position: center 100%;
+}
 
 .hero-overlay {
   position: absolute;
@@ -62,10 +62,14 @@
   position: absolute;
   top: 100px;
   right: 8%;
-  width: 273px;
-  height: 115px;
+  width: 300px;
   text-align: right;
   margin-top: 100px;
+  background: rgba(57, 35, 71, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-main-title {
@@ -94,6 +98,14 @@
   z-index: 11;
 }
 
+.hero-main-title h1,
+.hero-bio p,
+.hero-tagline p {
+  text-shadow:
+    0px 2px 15px rgba(0, 0, 0, 0.5),
+    0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* TEXT */
 .left-heading {
   font-family: var(--h1);
@@ -109,7 +121,7 @@
   font-family: var(--maincursive);
   color: var(--lightpurple);
   bottom: -170px;
-  right: -450px;
+  right: -70%;
   font-size: 200px;
   font-style: normal;
   font-weight: 400;
@@ -182,21 +194,18 @@
   width: 300px;
   height: 328px;
   align-self: flex-end;
-  border: var(--botanicalgreen) 5px solid;
 }
 
 .middle-box {
   width: 500px;
   height: 670px;
   z-index: 2;
-  border: var(--botanicalgreen) 5px solid;
 }
 
 .right-box {
   width: 300px;
   height: 328px;
   align-self: flex-start;
-  border: var(--botanicalgreen) 5px solid;
 }
 
 /* COLLAGE IMAGE CONTAINER */
