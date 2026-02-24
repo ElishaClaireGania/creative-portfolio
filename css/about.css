@@ -299,7 +299,7 @@ summary::-webkit-details-marker {
   font-family: var(--h1);
   font-size: 64px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   line-height: normal;
 }
 
@@ -431,7 +431,7 @@ summary::-webkit-details-marker {
   color: var(--midnightorchid);
   font-size: 64px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   line-height: normal;
   display: flex;
   flex-wrap: wrap;
