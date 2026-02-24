@@ -226,6 +226,14 @@
   gap: 30px;
 }
 
+.project-content.opposite {
+  flex-direction: row-reverse;
+}
+
+.project-content > div {
+  flex: 1;
+}
+
 /* IMAGE GRAYSCALE EFFECT */
 .image-container {
   position: relative;
