@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
+    <title>Connect with Elisha Claire</title>
     <link rel="icon" type="image/x-icon" href="img/myLogo.png" />
 
     <!-- CSS -->
@@ -17,24 +17,72 @@
 
     <!-- SCRIPTS -->
     <script src="scripts/button.js"></script>
+    <script src="scripts/page-loading.js"></script>
   </head>
   <body>
+    <!-- LOADING SCREEN -->
+    <div id="page-loading">
+      <div class="loading-content">
+        <!-- Animated Flower -->
+        <div class="loading-flower">
+          <svg
+            class="flower-spin"
+            width="80"
+            height="85"
+            viewBox="0 0 55 59"
+            fill="none"
+          >
+            <path
+              d="M27.5 0C47.8546 0 29.3435 20.3607 31.8617 21.8357C34.3799 23.3107 42.505 -3.13342 52.6823 14.75C62.8596 32.6334 36.2234 26.55 36.2234 29.5C36.2234 32.45 62.8596 26.3666 52.6823 44.25C42.505 62.1334 34.3799 35.6893 31.8617 37.1643C29.3435 38.6393 47.8546 59 27.5 59C7.14541 59 25.6565 38.6393 23.1383 37.1643C20.6201 35.6893 12.495 62.1334 2.31773 44.25C-7.85956 26.3666 18.7766 32.45 18.7766 29.5C18.7766 26.55 -7.85956 32.6334 2.31773 14.75C12.495 -3.13342 20.6201 23.3107 23.1383 21.8357C25.6565 20.3607 7.14541 0 27.5 0Z"
+              fill="#F0E6F5"
+            />
+          </svg>
+        </div>
+
+        <!-- Loading Title -->
+        <h2 class="loading-title">
+          <span class="loading-cursive">Loading</span>
+          <span class="loading-bold">ELISHA'S</span>
+          <span class="loading-cursive">Portfolio</span>
+        </h2>
+
+        <!-- Progress Bar -->
+        <div class="loading-progress">
+          <div class="progress-bar"></div>
+        </div>
+
+        <!-- Page Name -->
+        <p class="loading-page-name" id="loadingPageName"></p>
+      </div>
+    </div>
+
     <!-- NAVBAR -->
     <header>
       <nav>
-        <a href="index.html" class="logo"
-          ><img src="img/myLogo.png" alt="My Custom Logo"
-        /></a>
-        <div>
+        <a href="index.html" class="logo-link">
+          <img src="img/myLogo.png" alt="My Custom Logo" />
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </button>
+
+        <div class="nav-links" id="navLinks">
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Works</a></li>
-            <!-- <li><a href="resume.html">Résumé</a></li> -->
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html" class="link">About</a></li>
+            <li><a href="projects.html" class="link">Works</a></li>
+            <li><a href="contact.html" class="link">Contact</a></li>
           </ul>
         </div>
-
-        <div>
+        <div class="social-links-permanent">
           <ul>
             <li>
               <a href="" class="nav-social-link">

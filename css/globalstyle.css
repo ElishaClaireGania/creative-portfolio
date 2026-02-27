@@ -110,6 +110,11 @@ nav > a:first-child:hover {
   transform: none;
 }
 
+/* ============ TOGGLE ============ */
+.menu-toggle {
+  display: none;
+}
+
 /* ============ BODY ============ */
 body {
   margin: 0;
@@ -146,7 +151,7 @@ footer {
   gap: 15px;
 }
 
-/* --- Scroll To Top Button --- */
+/* ============ Scroll To Top Button ============ */
 #scrollToTop {
   position: fixed;
   bottom: 30px;
@@ -179,7 +184,7 @@ footer {
   box-shadow: 0 8px 20px rgba(109, 88, 129, 0.4);
 }
 
-/* GLOBAL MARGIN */
+/* ============ GLOBAL MARGIN ============ */
 main > section,
 footer {
   width: 100%;
@@ -192,6 +197,601 @@ footer {
 main > section {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* ============ SPLASH SCREEN ============ */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: fadeOut 0.8s ease-in-out 5s forwards;
+}
+
+/* Animated Gradient Background */
+.splash-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--midnightorchid),
+    var(--duskylilac),
+    var(--midpurple)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Background Flowers */
+.splash-flowers-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.splash-flower-bg {
+  position: absolute;
+  opacity: 0.2;
+  animation: floatBg 20s linear infinite;
+  filter: blur(1px);
+}
+
+.splash-flower-bg:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-duration: 25s;
+  animation-delay: 0s;
+}
+.splash-flower-bg:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-duration: 28s;
+  animation-delay: 2s;
+}
+.splash-flower-bg:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  animation-duration: 22s;
+  animation-delay: 1s;
+}
+.splash-flower-bg:nth-child(4) {
+  bottom: 25%;
+  right: 25%;
+  animation-duration: 30s;
+  animation-delay: 3s;
+}
+.splash-flower-bg:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-duration: 35s;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatBg {
+  from {
+    transform: rotate(0deg) translateY(0) scale(1);
+  }
+  to {
+    transform: rotate(360deg) translateY(-100px) scale(1.2);
+  }
+}
+
+/* Main Content */
+.splash-content {
+  text-align: center;
+  max-width: 700px;
+  padding: 0 20px;
+  z-index: 5;
+  position: relative;
+  animation: contentScale 1.2s ease-out;
+}
+
+@keyframes contentScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animated Flower Logo */
+.splash-flower-logo {
+  margin-bottom: 30px;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.flower-spin {
+  animation: spinSlow 12s linear infinite;
+  filter: drop-shadow(0 0 25px rgba(240, 230, 245, 0.7));
+}
+
+.flower-spin path {
+  fill: var(--lightpurple);
+  animation: colorPulse 4s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorPulse {
+  0%,
+  100% {
+    fill: var(--lightpurple);
+  }
+  50% {
+    fill: var(--irismist);
+  }
+}
+
+.splash-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.splash-cursive {
+  font-family: var(--maincursive);
+  color: var(--lightpurple);
+  font-size: 64px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideUpWord 0.6s ease-out forwards;
+}
+
+.splash-cursive:first-of-type {
+  animation-delay: 0.3s;
+}
+.splash-cursive:last-of-type {
+  animation-delay: 0.9s;
+}
+
+.splash-bold {
+  font-family: var(--h1);
+  color: var(--lightpurple);
+  font-size: 96px;
+  font-weight: 900;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideUpWord 0.6s ease-out 0.6s forwards;
+  letter-spacing: 2px;
+}
+
+@keyframes slideUpWord {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Decorative Line */
+.splash-line {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--lightpurple),
+    var(--irismist),
+    var(--lightpurple),
+    transparent
+  );
+  margin: 25px auto;
+  opacity: 0;
+  animation: lineExpand 0.8s ease-out 1.2s forwards;
+  background-size: 200% 100%;
+  animation:
+    lineGlow 3s infinite,
+    lineExpand 0.8s ease-out 1.2s forwards;
+}
+
+@keyframes lineExpand {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 200px;
+  }
+}
+
+@keyframes lineGlow {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+/* Creative Loading Indicator */
+.splash-loading {
+  margin-top: 40px;
+}
+
+.loading-petals {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.petal {
+  width: 20px;
+  height: 20px;
+  background: var(--lightpurple);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: petalBloom 1.5s ease-in-out infinite;
+  opacity: 0;
+  box-shadow: 0 0 15px var(--lightpurple);
+}
+
+.petal:nth-child(1) {
+  animation-delay: 1.3s;
+  background: var(--lightpurple);
+}
+.petal:nth-child(2) {
+  animation-delay: 1.4s;
+  background: var(--irismist);
+}
+.petal:nth-child(3) {
+  animation-delay: 1.5s;
+  background: var(--plumblossom);
+}
+.petal:nth-child(4) {
+  animation-delay: 1.6s;
+  background: var(--midpurple);
+}
+.petal:nth-child(5) {
+  animation-delay: 1.7s;
+  background: var(--irismist);
+}
+.petal:nth-child(6) {
+  animation-delay: 1.8s;
+  background: var(--lightpurple);
+}
+
+@keyframes petalBloom {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.5);
+  }
+}
+
+.loading-text {
+  font-family: var(--bodytext_buttons);
+  color: var(--lightpurple);
+  font-size: 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1.5s forwards;
+  text-shadow: 0 0 15px rgba(240, 230, 245, 0.8);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Falling Flowers */
+.falling-flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.falling-flower-svg {
+  position: absolute;
+  animation: fall linear forwards;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(240, 230, 245, 0.6));
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ============ CUSTOM PAGE LOADING SCREEN ============ */
+#page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--midnightorchid), var(--duskylilac));
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity 0.6s ease-in-out,
+    visibility 0.6s ease-in-out;
+}
+
+#page-loading.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+  animation: fadeScaleIn 0.8s ease-out;
+}
+
+/* Animated Flower */
+.loading-flower {
+  margin-bottom: 30px;
+  animation: floatFlower 3s ease-in-out infinite;
+}
+
+.flower-spin {
+  animation: spinSlow 8s linear infinite;
+  filter: drop-shadow(0 0 15px rgba(240, 230, 245, 0.5));
+}
+
+.flower-spin path {
+  fill: var(--lightpurple);
+  animation: colorPulse 3s ease-in-out infinite;
+}
+
+/* Loading Title */
+.loading-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+
+.loading-cursive {
+  font-family: var(--maincursive);
+  color: var(--lightpurple);
+  font-size: 42px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: slideInWord 0.5s ease-out forwards;
+}
+
+.loading-cursive:first-of-type {
+  animation-delay: 0.2s;
+}
+
+.loading-bold {
+  font-family: var(--h1);
+  color: var(--lightpurple);
+  font-size: 58px;
+  font-weight: 900;
+  text-shadow: 0 0 20px rgba(240, 230, 245, 0.5);
+  opacity: 0;
+  animation: slideInWord 0.5s ease-out 0.4s forwards;
+}
+
+.loading-cursive:last-of-type {
+  animation-delay: 0.6s;
+}
+
+/* Progress Bar */
+.loading-progress {
+  width: 280px;
+  height: 4px;
+  background: rgba(240, 230, 245, 0.2);
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--lightpurple),
+    var(--irismist),
+    var(--lightpurple)
+  );
+  border-radius: 10px;
+  animation: progressLoad 1.8s ease-in-out forwards;
+  box-shadow: 0 0 20px var(--lightpurple);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+/* Page Name */
+.loading-page-name {
+  font-family: var(--bodytext_buttons);
+  color: var(--lightpurple);
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1s forwards;
+  text-shadow: 0 0 10px rgba(240, 230, 245, 0.5);
+}
+
+/* Animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatFlower {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes colorPulse {
+  0%,
+  100% {
+    fill: var(--lightpurple);
+  }
+  50% {
+    fill: var(--irismist);
+  }
+}
+
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInWord {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressLoad {
+  0% {
+    width: 0%;
+  }
+  20% {
+    width: 30%;
+  }
+  40% {
+    width: 50%;
+  }
+  60% {
+    width: 70%;
+  }
+  80% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* ============ GLOBAL RESPONSIVE DESIGN ============ */
@@ -219,14 +819,24 @@ main > section {
   }
 }
 
-/* ============ TABLET & MOBILE NAV FIX (Up to 1024px) ============ */
-@media (max-width: 1024px) {
-  /* 1. Reset Nav structure */
+/* TABLET RESPONSIVE (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
   nav {
-    padding: 10px 5%;
+    padding: 7%;
+    height: 90px;
   }
 
-  /* 2. Style the 9-Dots Toggle */
+  nav > a:first-child img {
+    height: 80px;
+  }
+
+  /* Collapse desktop menu */
+  nav div:first-of-type ul,
+  nav div:last-of-type ul {
+    display: none;
+  }
+
+  /* Hamburger Toggle */
   .menu-toggle {
     display: grid;
     grid-template-columns: repeat(3, 8px);
@@ -234,8 +844,8 @@ main > section {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 2000; /* Stays above the menu */
-    margin-left: auto; /* Pushes toggle to the right */
+    z-index: 2000;
+    margin-left: auto;
     padding: 15px;
   }
 
@@ -247,59 +857,153 @@ main > section {
     transition: 0.3s;
   }
 
-  /* 3. The Hidden Menu Containers */
+  /* Mobile/Tablet Menu Overlay */
   .nav-links,
   .social-links-permanent {
     position: fixed;
-    right: -100%; /* Hidden off-screen */
+    right: -100%;
     width: 100%;
     background: var(--midnightorchid);
+    backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: 1500;
   }
 
-  /* Nav Links take the top half */
   .nav-links {
     top: 0;
     height: 65vh;
   }
 
-  /* Social Links take the bottom half */
   .social-links-permanent {
     top: 65vh;
     height: 35vh;
-    margin-left: 0 !important; /* Removes your desktop 8rem margin */
+    border-top: 1px solid rgba(240, 230, 245, 0.1);
   }
 
-  /* 4. Triggered State (When JS adds .active) */
   .nav-links.active,
   .social-links-permanent.active {
-    right: 0;
+    right: 0 !important;
   }
 
-  /* 5. List Adjustments for Vertical Stacking */
   .nav-links ul {
+    display: flex !important;
     flex-direction: column !important;
     gap: 2.5rem !important;
   }
 
   .social-links-permanent ul {
-    flex-direction: row !important; /* Keep socials side-by-side */
+    display: flex !important;
+    flex-direction: row !important;
     gap: 2rem !important;
-    margin-left: 0 !important;
   }
 
-  nav div:first-child {
-    gap: 0; /* Clears desktop gaps */
+  /* Reset Global Section Padding */
+  main > section,
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 40px 5%;
+  }
+
+  #scrollToTop {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
-/* Ensure Toggle is hidden on Desktop */
-@media (min-width: 1025px) {
-  .menu-toggle {
-    display: none;
+@media (max-width: 768px) {
+  .loading-cursive {
+    font-size: 32px;
+  }
+
+  .loading-bold {
+    font-size: 44px;
+  }
+
+  .loading-progress {
+    width: 220px;
+  }
+
+  .flower-spin {
+    width: 60px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-cursive {
+    font-size: 28px;
+  }
+
+  .loading-bold {
+    font-size: 38px;
+  }
+
+  .loading-progress {
+    width: 200px;
+  }
+
+  .loading-page-name {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .splash-cursive {
+    font-size: 42px;
+  }
+
+  .splash-bold {
+    font-size: 64px;
+  }
+
+  .flower-spin {
+    width: 70px;
+    height: 75px;
+  }
+
+  .splash-line {
+    width: 150px;
+  }
+
+  @keyframes lineExpand {
+    100% {
+      width: 150px;
+    }
+  }
+
+  .petal {
+    width: 15px;
+    height: 15px;
+  }
+
+  .loading-text {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-cursive {
+    font-size: 32px;
+  }
+
+  .splash-bold {
+    font-size: 48px;
+  }
+
+  .flower-spin {
+    width: 60px;
+    height: 65px;
   }
 }

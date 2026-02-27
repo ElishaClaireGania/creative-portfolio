@@ -42,7 +42,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 20% center;
+  object-position: 20% 80%;
   filter: brightness(0.9) contrast(1);
 }
 
@@ -62,14 +62,17 @@
   position: absolute;
   top: 100px;
   right: 8%;
-  width: 300px;
+  width: 350px;
   text-align: right;
   margin-top: 100px;
   background: rgba(57, 35, 71, 0.5);
-  backdrop-filter: blur(5px);
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 35px 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(240, 230, 245, 0.2);
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .hero-main-title {
@@ -392,18 +395,6 @@ summary::-webkit-details-marker {
   animation: slideDown 0.4s ease-out;
 }
 
-/* Animation / Interaction */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .softskill-item[open] .line-separator {
   background-color: var(--irismist);
   height: 3px;
@@ -714,9 +705,15 @@ summary::-webkit-details-marker {
 /* DESKTOP (1201px - 1400px) */
 @media (min-width: 1201px) and (max-width: 1400px) {
   /* Hero Section */
+  .hero-bg {
+    transform: scale(1.1);
+    object-position: 20% 90% !important;
+    overflow: hidden;
+  }
+
   .hero-bio {
-    right: 5%;
-    width: 280px;
+    right: 7%;
+    width: 300px;
     margin-top: 40px;
   }
 
@@ -1141,5 +1138,199 @@ summary::-webkit-details-marker {
 @media (min-width: 1025px) and (max-width: 1400px) {
   .hero-bg {
     object-position: 25% center;
+  }
+}
+
+/* TABLET VIEW (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-bg {
+    object-position: 30% center;
+  }
+
+  .hero-bio {
+    top: 30px;
+    right: 7%;
+    width: 250px;
+    padding: 25px;
+  }
+
+  .hero-bio p {
+    font-size: 16px;
+  }
+
+  .left-heading {
+    padding-top: 27px;
+    font-size: 80px;
+  }
+
+  .big-cursive {
+    font-size: 120px;
+    bottom: -100px;
+    right: -50%;
+  }
+
+  .hero-tagline {
+    padding-top: 3px;
+  }
+
+  .about-me {
+    padding: 60px 5%;
+  }
+
+  .main-images-container {
+    gap: 20px;
+    height: 450px;
+    margin-bottom: 40px;
+  }
+
+  .left-box,
+  .right-box {
+    width: 180px;
+    height: 220px;
+  }
+
+  .middle-box {
+    width: 320px;
+    height: 450px;
+  }
+
+  .elisha-title {
+    font-size: 70px;
+    top: 25%;
+    left: 0%;
+  }
+
+  .claire-title {
+    font-size: 110px;
+    bottom: 15%;
+    right: 1%;
+  }
+
+  .about-text-columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .collage-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 80px;
+  }
+
+  .small-box {
+    width: 100%;
+    height: 240px;
+  }
+
+  .b1,
+  .b2,
+  .b3,
+  .b4,
+  .b5 {
+    transform: none;
+  }
+
+  .soft-skills {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .softskill-header h2 {
+    font-size: 36px;
+  }
+
+  .technical-start {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .technical-start p {
+    text-align: left;
+    width: 100%;
+  }
+
+  .frontend-lists,
+  .backend-lists,
+  .design-lists {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px;
+  }
+
+  .frontend-skill,
+  .backend-skill,
+  .design-skill {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    margin-left: 0;
+    align-self: flex-start;
+    width: 100px;
+    height: auto;
+  }
+
+  .line-divider {
+    grid-column: 1 / -1;
+    margin-top: -50px !important;
+    margin-bottom: 0px;
+    height: 1px;
+    background-color: var(--lightpurple);
+    display: block;
+    width: 100%;
+  }
+
+  .frontend-lists h3,
+  .backend-lists h3,
+  .design-lists h3 {
+    grid-column: 1 / -1;
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
+
+  .newsletter-start {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .newsletter-start h1 {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 45px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .newsletter-start svg {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+    fill: var(--midnightorchid);
+  }
+
+  .newsletter-start .cursive {
+    font-size: 80px;
+    margin-top: -10px;
+  }
+
+  .newsletter-wrapper form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .newsletter-wrapper button {
+    width: 100%;
+    padding: 15px;
   }
 }

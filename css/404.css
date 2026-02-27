@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Colors */
+  --mainbackground: linear-gradient(180deg, #f0e6f5 0%, #9e83b8 100%);
+  --midnightorchid: #392347;
+  --duskylilac: #6d5881;
+  --botanicalgreen: #1b4c16;
+  --irismist: #b8a3c2;
+  --plumblossom: #d0c4d8;
+  --lightpurple: #f0e6f5;
+  --midpurple: #9e83b8;
+
+  /* Font-styles */
+  --maincursive: "Great Vibes", cursive;
+  --secondarycursive: "Parisienne", cursive;
+  --h1: "Montserrat", sans-serif;
+  --bodytext_buttons: "Raleway", sans-serif;
+}
+
+.error-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--midnightorchid), var(--duskylilac));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 200px 0 120px 20px;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 700px;
+  z-index: 10;
+  animation: fadeScaleIn 1s ease-out;
+}
+
+/* Floating flowers in background */
+.error-flowers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.error-flower {
+  position: absolute;
+  opacity: 0.15;
+  animation: floatError 20s linear infinite;
+}
+
+.error-flower:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-duration: 25s;
+}
+.error-flower:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-duration: 30s;
+}
+.error-flower:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  animation-duration: 22s;
+}
+.error-flower:nth-child(4) {
+  bottom: 25%;
+  right: 25%;
+  animation-duration: 28s;
+}
+.error-flower:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-duration: 35s;
+}
+
+/* 404 Number */
+.error-number {
+  font-family: var(--h1);
+  font-size: 180px;
+  font-weight: 900;
+  color: var(--lightpurple);
+  line-height: 1;
+  margin-bottom: 20px;
+  text-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(240, 230, 245, 0.3);
+  animation: glitch 3s infinite;
+  position: relative;
+}
+
+.error-number span {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.error-number span:nth-child(1) {
+  animation-delay: 0s;
+}
+.error-number span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.error-number span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Error Message */
+.error-message {
+  margin-bottom: 30px;
+}
+
+.error-cursive {
+  font-family: var(--maincursive);
+  color: var(--lightpurple);
+  font-size: 48px;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: slideUpFade 0.8s ease-out 0.3s forwards;
+}
+
+.error-bold {
+  font-family: var(--h1);
+  color: var(--lightpurple);
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideUpFade 0.8s ease-out 0.6s forwards;
+}
+
+.error-description {
+  font-family: var(--bodytext_buttons);
+  color: var(--lightpurple);
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  opacity: 0;
+  animation: slideUpFade 0.8s ease-out 0.9s forwards;
+}
+
+/* Decorative Line */
+.error-line {
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--lightpurple),
+    transparent
+  );
+  margin: 30px auto;
+  opacity: 0.5;
+}
+
+/* Buttons */
+.error-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 50px;
+  font-family: var(--bodytext_buttons);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.error-btn.primary {
+  background: var(--lightpurple);
+  color: var(--midnightorchid);
+}
+
+.error-btn.primary:hover {
+  background: transparent;
+  color: var(--lightpurple);
+  border-color: var(--lightpurple);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(240, 230, 245, 0.3);
+}
+
+.error-btn.secondary {
+  background: transparent;
+  color: var(--lightpurple);
+  border-color: var(--lightpurple);
+}
+
+.error-btn.secondary:hover {
+  background: var(--lightpurple);
+  color: var(--midnightorchid);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(240, 230, 245, 0.3);
+}
+
+.error-btn i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.error-btn:hover i.fa-arrow-right {
+  transform: translateX(5px);
+}
+
+.error-btn:hover i.fa-arrow-left {
+  transform: translateX(-5px);
+}
+
+/* Broken Flower SVG */
+.broken-flower {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.broken-flower svg {
+  animation: brokenSpin 8s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(240, 230, 245, 0.5));
+}
+
+.broken-flower svg path {
+  animation: brokenPulse 3s ease-in-out infinite;
+}
+
+.broken-flower::before,
+.broken-flower::after {
+  content: "✧";
+  position: absolute;
+  color: var(--lightpurple);
+  font-size: 30px;
+  opacity: 0.3;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.broken-flower::before {
+  top: -20px;
+  left: -30px;
+}
+
+.broken-flower::after {
+  bottom: -20px;
+  right: -30px;
+  animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatError {
+  from {
+    transform: rotate(0deg) translateY(0);
+  }
+  to {
+    transform: rotate(360deg) translateY(-100px);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: skew(0deg);
+  }
+  95% {
+    transform: skew(2deg);
+  }
+  96% {
+    transform: skew(-2deg);
+  }
+  97% {
+    transform: skew(1deg);
+  }
+  98% {
+    transform: skew(-1deg);
+  }
+}
+
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes brokenSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes brokenPulse {
+  0%,
+  100% {
+    fill: var(--lightpurple);
+  }
+  50% {
+    fill: var(--irismist);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* DESKTOP (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .error-number {
+    font-size: 160px;
+  }
+
+  .error-cursive {
+    font-size: 44px;
+  }
+
+  .error-bold {
+    font-size: 58px;
+  }
+
+  .error-description {
+    font-size: 17px;
+    max-width: 480px;
+  }
+
+  .error-btn {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .broken-flower svg {
+    width: 75px;
+    height: 80px;
+  }
+
+  /* Adjust flower positions */
+  .error-flower:nth-child(1) {
+    top: 8%;
+    left: 8%;
+  }
+  .error-flower:nth-child(2) {
+    top: 18%;
+    right: 12%;
+  }
+  .error-flower:nth-child(3) {
+    bottom: 12%;
+    left: 18%;
+  }
+  .error-flower:nth-child(4) {
+    bottom: 20%;
+    right: 22%;
+  }
+  .error-flower:nth-child(5) {
+    top: 45%;
+    left: 45%;
+  }
+
+  .error-flower {
+    width: 35px;
+    height: 38px;
+  }
+}
+
+/* SMALL DESKTOP (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .error-number {
+    font-size: 140px;
+  }
+
+  .error-cursive {
+    font-size: 40px;
+  }
+
+  .error-bold {
+    font-size: 52px;
+  }
+
+  .error-description {
+    font-size: 16px;
+    max-width: 450px;
+  }
+
+  .error-line {
+    width: 130px;
+    margin: 25px auto;
+  }
+
+  .error-buttons {
+    gap: 18px;
+  }
+
+  .error-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+
+  .broken-flower svg {
+    width: 70px;
+    height: 75px;
+  }
+
+  .broken-flower::before {
+    font-size: 26px;
+    top: -15px;
+    left: -25px;
+  }
+
+  .broken-flower::after {
+    font-size: 26px;
+    bottom: -15px;
+    right: -25px;
+  }
+
+  .error-flower {
+    width: 32px;
+    height: 35px;
+    opacity: 0.12;
+  }
+
+  .error-flower:nth-child(1) {
+    top: 8%;
+    left: 7%;
+  }
+  .error-flower:nth-child(2) {
+    top: 16%;
+    right: 10%;
+  }
+  .error-flower:nth-child(3) {
+    bottom: 10%;
+    left: 15%;
+  }
+  .error-flower:nth-child(4) {
+    bottom: 18%;
+    right: 20%;
+  }
+  .error-flower:nth-child(5) {
+    top: 40%;
+    left: 48%;
+  }
+
+  .error-flower {
+    animation-duration: 30s;
+  }
+}
+
+/* TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .error-section {
+    padding: 80px 15px;
+    min-height: 100vh;
+  }
+
+  .error-number {
+    font-size: 120px;
+    margin-bottom: 15px;
+  }
+
+  .error-number span {
+    animation: floatTablet 4s ease-in-out infinite;
+  }
+
+  @keyframes floatTablet {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .error-cursive {
+    font-size: 38px;
+    margin-bottom: 5px;
+  }
+
+  .error-bold {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .error-description {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+
+  .error-line {
+    width: 120px;
+    margin: 20px auto;
+    height: 1.5px;
+  }
+
+  .error-buttons {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .error-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 200px;
+  }
+
+  .broken-flower {
+    margin-bottom: 25px;
+  }
+
+  .broken-flower svg {
+    width: 65px;
+    height: 70px;
+    animation: spinSlow 10s linear infinite;
+  }
+
+  .broken-flower::before {
+    font-size: 24px;
+    top: -15px;
+    left: -20px;
+  }
+
+  .broken-flower::after {
+    font-size: 24px;
+    bottom: -15px;
+    right: -20px;
+  }
+
+  .error-flower {
+    width: 28px;
+    height: 31px;
+    opacity: 0.1;
+  }
+
+  .error-flower:nth-child(1) {
+    top: 5%;
+    left: 5%;
+    animation-duration: 28s;
+  }
+  .error-flower:nth-child(2) {
+    top: 12%;
+    right: 8%;
+    animation-duration: 32s;
+  }
+  .error-flower:nth-child(3) {
+    bottom: 8%;
+    left: 10%;
+    animation-duration: 25s;
+  }
+  .error-flower:nth-child(4) {
+    bottom: 15%;
+    right: 15%;
+    animation-duration: 30s;
+  }
+  .error-flower:nth-child(5) {
+    top: 35%;
+    left: 45%;
+    animation-duration: 35s;
+  }
+
+  @keyframes glitchTablet {
+    0%,
+    100% {
+      transform: skew(0deg);
+    }
+    96% {
+      transform: skew(1deg);
+    }
+    98% {
+      transform: skew(-1deg);
+    }
+  }
+
+  .error-number {
+    animation: glitchTablet 4s infinite;
+  }
+}
+
+/* TABLET LANDSCAPE  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .error-section {
+    padding: 60px 20px;
+  }
+
+  .error-number {
+    font-size: 110px;
+  }
+
+  .error-content {
+    max-width: 600px;
+  }
+
+  .error-description {
+    margin-bottom: 25px;
+    max-width: 450px;
+  }
+
+  .error-buttons {
+    flex-direction: row;
+  }
+
+  .error-btn {
+    width: 160px;
+  }
+
+  .error-flower {
+    opacity: 0.08;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .error-section {
+    padding: 100px 15px;
+  }
+
+  .error-number {
+    font-size: 130px;
+  }
+
+  .error-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-btn {
+    width: 220px;
+  }
+
+  .error-flower {
+    opacity: 0.12;
+  }
+}
+
+/* LARGE TABLET (900px - 1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .error-number {
+    font-size: 135px;
+  }
+
+  .error-bold {
+    font-size: 52px;
+  }
+
+  .error-description {
+    font-size: 17px;
+    max-width: 480px;
+  }
+
+  .error-buttons {
+    gap: 20px;
+  }
+
+  .error-btn {
+    padding: 14px 30px;
+  }
+}
+
+/* SMALL TABLET (768px - 899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .error-number {
+    font-size: 115px;
+  }
+
+  .error-bold {
+    font-size: 44px;
+  }
+
+  .error-cursive {
+    font-size: 34px;
+  }
+
+  .error-description {
+    font-size: 15px;
+  }
+
+  .error-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  .broken-flower svg {
+    width: 55px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .error-flower {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .broken-flower svg {
+    will-change: transform;
+  }
+
+  .error-btn {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .error-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) and (-webkit-min-device-pixel-ratio: 2) {
+  .error-flower {
+    opacity: 0.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .error-number,
+  .error-number span,
+  .error-flower,
+  .broken-flower svg,
+  .broken-flower::before,
+  .broken-flower::after {
+    animation: none !important;
+  }
+
+  .error-content {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
