@@ -193,3 +193,113 @@ main > section {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* ============ GLOBAL RESPONSIVE DESIGN ============ */
+
+/* LAPTOP (1025px - 1400px) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  nav {
+    padding: 0 5%;
+  }
+
+  nav div:first-of-type ul {
+    gap: 4rem;
+  }
+
+  nav div:last-of-type ul {
+    margin-left: 4rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  nav > a img {
+    height: 80px;
+  }
+}
+
+/* ============ TABLET & MOBILE NAV FIX (Up to 1024px) ============ */
+@media (max-width: 1024px) {
+  /* 1. Reset Nav structure */
+  nav {
+    padding: 10px 5%;
+  }
+
+  /* 2. Style the 9-Dots Toggle */
+  .menu-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 8px);
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000; /* Stays above the menu */
+    margin-left: auto; /* Pushes toggle to the right */
+    padding: 15px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--lightpurple);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  /* 3. The Hidden Menu Containers */
+  .nav-links,
+  .social-links-permanent {
+    position: fixed;
+    right: -100%; /* Hidden off-screen */
+    width: 100%;
+    background: var(--midnightorchid);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1500;
+  }
+
+  /* Nav Links take the top half */
+  .nav-links {
+    top: 0;
+    height: 65vh;
+  }
+
+  /* Social Links take the bottom half */
+  .social-links-permanent {
+    top: 65vh;
+    height: 35vh;
+    margin-left: 0 !important; /* Removes your desktop 8rem margin */
+  }
+
+  /* 4. Triggered State (When JS adds .active) */
+  .nav-links.active,
+  .social-links-permanent.active {
+    right: 0;
+  }
+
+  /* 5. List Adjustments for Vertical Stacking */
+  .nav-links ul {
+    flex-direction: column !important;
+    gap: 2.5rem !important;
+  }
+
+  .social-links-permanent ul {
+    flex-direction: row !important; /* Keep socials side-by-side */
+    gap: 2rem !important;
+    margin-left: 0 !important;
+  }
+
+  nav div:first-child {
+    gap: 0; /* Clears desktop gaps */
+  }
+}
+
+/* Ensure Toggle is hidden on Desktop */
+@media (min-width: 1025px) {
+  .menu-toggle {
+    display: none;
+  }
+}

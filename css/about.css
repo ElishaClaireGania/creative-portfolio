@@ -42,8 +42,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.9) contrast(1.05);
-  object-position: center 100%;
+  object-position: 20% center;
+  filter: brightness(0.9) contrast(1);
 }
 
 .hero-overlay {
@@ -120,8 +120,8 @@
 .big-cursive {
   font-family: var(--maincursive);
   color: var(--lightpurple);
-  bottom: -170px;
-  right: -70%;
+  bottom: -200px;
+  right: -80%;
   font-size: 200px;
   font-style: normal;
   font-weight: 400;
@@ -707,4 +707,440 @@ summary::-webkit-details-marker {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* DESKTOP (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  /* Hero Section */
+  .hero-bio {
+    right: 5%;
+    width: 280px;
+    margin-top: 40px;
+  }
+
+  .hero-bio p {
+    font-size: 18px;
+  }
+
+  .left-heading {
+    font-size: 100px;
+  }
+
+  .big-cursive {
+    font-size: 160px;
+    bottom: -140px;
+    right: -60%;
+  }
+
+  .hero-tagline p {
+    font-size: 20px;
+  }
+
+  .small-cursive {
+    font-size: 32px;
+  }
+
+  .indent-code {
+    margin-left: 80px;
+  }
+
+  /* Main Images Container */
+  .main-images-container {
+    gap: 40px;
+    height: 600px;
+    margin-bottom: 60px;
+  }
+
+  .left-box {
+    width: 260px;
+    height: 280px;
+  }
+
+  .middle-box {
+    width: 420px;
+    height: 600px;
+  }
+
+  .right-box {
+    width: 260px;
+    height: 280px;
+  }
+
+  /* Collage Container */
+  .collage-container {
+    gap: 50px;
+    margin-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .small-box {
+    width: 260px;
+    height: 300px;
+  }
+
+  /* Text Overlays */
+  .elisha-title {
+    font-size: 100px;
+    top: 30%;
+  }
+
+  .claire-title {
+    font-size: 160px;
+    bottom: 17%;
+    right: 1%;
+  }
+
+  .about-text-columns {
+    gap: 50px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  /* Soft Skills */
+  .soft-start h2 {
+    font-size: 54px;
+  }
+
+  .soft-start .cursive {
+    font-size: 80px;
+  }
+
+  .soft-start p {
+    font-size: 20px;
+  }
+
+  .soft-skills {
+    gap: 30px 80px;
+  }
+
+  .softskill-header h2 {
+    font-size: 42px;
+  }
+
+  .softskill-header p {
+    font-size: 32px;
+  }
+
+  .softskill-content {
+    padding: 25px 0 0 55px;
+    font-size: 16px;
+  }
+
+  /* Technical Skills */
+  .technical-start h2 {
+    font-size: 54px;
+  }
+
+  .technical-start .cursive {
+    font-size: 80px;
+  }
+
+  .technical-start p {
+    font-size: 20px;
+    width: 380px;
+  }
+
+  .frontend-lists h3,
+  .backend-lists h3,
+  .design-lists h3 {
+    font-size: 34px;
+  }
+
+  .frontend-lists,
+  .backend-lists,
+  .design-lists {
+    gap: 60px 40px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    margin-left: -200px;
+  }
+
+  .leftside,
+  .rightside {
+    font-size: 20px;
+  }
+
+  /* Newsletter */
+  .newsletter-start h1 {
+    font-size: 54px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 100px;
+  }
+
+  .newsletter-start svg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .cursive-button {
+    font-size: 26px;
+  }
+
+  .newsletter-wrapper button {
+    padding: 10px 35px;
+  }
+}
+
+/* SMALL DESKTOP (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Hero Section */
+  .hero-bio {
+    right: 4%;
+    width: 260px;
+    margin-top: 60px;
+    padding: 12px;
+  }
+
+  .hero-bio p {
+    font-size: 16px;
+  }
+
+  .left-heading {
+    font-size: 85px;
+  }
+
+  .big-cursive {
+    font-size: 140px;
+    bottom: -120px;
+    right: -50%;
+  }
+
+  .hero-tagline p {
+    font-size: 18px;
+  }
+
+  .small-cursive {
+    font-size: 28px;
+  }
+
+  .indent-code {
+    margin-left: 70px;
+  }
+
+  /* Main Images Container */
+  .main-images-container {
+    gap: 30px;
+    height: 520px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+
+  .left-box {
+    width: 220px;
+    height: 240px;
+  }
+
+  .middle-box {
+    width: 360px;
+    height: 520px;
+  }
+
+  .right-box {
+    width: 220px;
+    height: 240px;
+  }
+
+  /* Collage Container */
+  .collage-container {
+    gap: 40px;
+    margin-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .small-box {
+    width: 220px;
+    height: 260px;
+  }
+
+  .b1,
+  .b3,
+  .b5 {
+    transform: rotate(-7deg) translateY(30px);
+  }
+
+  .b2,
+  .b4 {
+    transform: rotate(-7deg) translateY(-30px);
+  }
+
+  /* Text Overlays */
+  .elisha-title {
+    font-size: 85px;
+    top: 24%;
+    left: -0.5%;
+  }
+
+  .claire-title {
+    font-size: 140px;
+    bottom: 7%;
+    right: 1%;
+  }
+
+  .about-text-columns {
+    gap: 40px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  /* Soft Skills */
+  .softskills-wrapper {
+    padding: 80px 5%;
+  }
+
+  .soft-start {
+    margin-bottom: 60px;
+  }
+
+  .soft-start h2 {
+    font-size: 48px;
+  }
+
+  .soft-start .cursive {
+    font-size: 72px;
+  }
+
+  .soft-start p {
+    font-size: 18px;
+  }
+
+  .soft-skills {
+    gap: 25px 60px;
+  }
+
+  .softskill-header h2 {
+    font-size: 38px;
+  }
+
+  .softskill-header p {
+    font-size: 28px;
+  }
+
+  .softskill-content {
+    padding: 20px 0 0 45px;
+    font-size: 15px;
+  }
+
+  /* Technical Skills */
+  .technicalskills-wrapper {
+    padding: 80px 5%;
+    gap: 50px;
+  }
+
+  .technical-start {
+    padding-bottom: 40px;
+  }
+
+  .technical-start h2 {
+    font-size: 48px;
+  }
+
+  .technical-start .cursive {
+    font-size: 72px;
+  }
+
+  .technical-start p {
+    font-size: 18px;
+    width: 320px;
+  }
+
+  .frontend-lists h3,
+  .backend-lists h3,
+  .design-lists h3 {
+    font-size: 30px;
+  }
+
+  .frontend-lists,
+  .backend-lists,
+  .design-lists {
+    gap: 50px 30px;
+    margin-bottom: 50px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    margin-left: -200px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-info {
+    margin-bottom: 8px;
+  }
+
+  .leftside,
+  .rightside {
+    font-size: 18px;
+  }
+
+  .slider {
+    height: 16px;
+  }
+
+  .slider-fill::after {
+    width: 18px;
+    height: 18px;
+    right: -8px;
+  }
+
+  .line-divider {
+    margin-top: -40px;
+  }
+
+  /* Newsletter */
+  .newsletter-wrapper {
+    padding: 40px 5% 80px 5%;
+  }
+
+  .newsletter-start {
+    padding-bottom: 15px;
+  }
+
+  .newsletter-start h1 {
+    font-size: 48px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 90px;
+  }
+
+  .newsletter-start svg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .newsletter-wrapper form {
+    gap: 25px 50px;
+  }
+
+  .newsletter-wrapper input {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .newsletter-wrapper input::placeholder {
+    font-size: 13px;
+  }
+
+  .newsletter-wrapper button {
+    padding: 10px 30px;
+  }
+
+  .cursive-button {
+    font-size: 24px;
+  }
+}
+
+/* Adjustments for the hero-bg positioning */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .hero-bg {
+    object-position: 25% center;
+  }
 }

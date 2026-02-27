@@ -274,3 +274,336 @@
   margin: 15px 0;
   opacity: 0.5;
 }
+
+/* ============ RESPONSIVE DESIGN============ */
+
+/* DESKTOP (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  /* Hero Section */
+  .hero-overlay {
+    padding: 5% 8% 7% 8%;
+  }
+
+  .hero-content {
+    margin-right: 20px;
+    flex: 0 1 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 54px;
+    margin-right: 365px;
+  }
+
+  .hero-content .normal-cursive {
+    font-size: 100px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 600px;
+  }
+
+  /* Decorative Lines */
+  .vertical-line {
+    right: 20%;
+  }
+
+  .flower-container {
+    right: 20%;
+    top: 57%;
+  }
+
+  .horizontal-line {
+    top: 57%;
+  }
+
+  /* Contact Form Container */
+  .contact-container {
+    grid-template-columns: 1fr 350px;
+    padding: 70px 3%;
+    max-width: 1200px;
+  }
+
+  /* Left Panel - Form */
+  .left-panel {
+    padding: 50px 120px 50px 50px;
+    gap: 25px;
+  }
+
+  .left-panel h3 {
+    font-size: 32px;
+  }
+
+  .contact-cursive {
+    font-size: 54px;
+  }
+
+  .form-row {
+    gap: 25px;
+  }
+
+  .input-group label {
+    font-size: 16px;
+    padding-bottom: 8px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  /* Right Panel - Info Card */
+  .right-panel {
+    margin-left: -60px;
+    margin-bottom: 20px;
+  }
+
+  .info-card {
+    width: 420px;
+    padding: 25px;
+  }
+
+  .info-card h4 {
+    font-size: 22px;
+  }
+
+  .info-card ul {
+    padding: 0px 20px 0px 15px;
+  }
+
+  .info-card ul li {
+    font-size: 15px;
+    gap: 12px;
+    padding-bottom: 15px;
+  }
+
+  .info-card ul li svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .line-divider {
+    margin: 12px 0;
+  }
+}
+
+/* SMALL DESKTOP (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Hero Section */
+  .hero-overlay {
+    padding: 5% 6% 7% 6%;
+  }
+
+  .hero-content {
+    margin-right: 20px;
+    flex: 0 1 700px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    margin-right: 280px;
+  }
+
+  .hero-content .normal-cursive {
+    font-size: 85px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 550px;
+  }
+
+  /* Decorative Lines */
+  .vertical-line {
+    right: 12%;
+  }
+
+  .flower-container {
+    right: 12%;
+  }
+
+  .horizontal-line {
+    top: 50%;
+  }
+
+  /* Contact Form Container */
+  .contact-container {
+    grid-template-columns: 1fr 320px;
+    padding: 60px 2%;
+    gap: 0;
+  }
+
+  /* Left Panel - Form */
+  .left-panel {
+    padding: 40px 100px 40px 40px;
+    gap: 20px;
+  }
+
+  .left-panel h3 {
+    font-size: 28px;
+  }
+
+  .contact-cursive {
+    font-size: 48px;
+  }
+
+  .form-row {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    font-size: 15px;
+    padding-bottom: 6px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 8px 10px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .submit-btn {
+    padding: 10px 22px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  /* Right Panel - Info Card */
+  .right-panel {
+    margin-left: -40px;
+    margin-bottom: 15px;
+  }
+
+  .info-card {
+    width: 360px;
+    padding: 20px;
+    box-shadow: 15px 15px 30px rgba(120, 90, 130, 0.5);
+  }
+
+  .info-card h4 {
+    font-size: 20px;
+  }
+
+  .info-card ul {
+    padding: 0px 15px 0px 10px;
+  }
+
+  .info-card ul li {
+    font-size: 14px;
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .info-card ul li svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .line-divider {
+    margin: 10px 0;
+  }
+}
+
+/* Image positioning for contact page */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .hero-bg {
+    object-position: 20% center; /* Keep face visible on left */
+  }
+}
+
+/* Fine-tuning for specific ranges */
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .hero-content h1 {
+    margin-right: 320px;
+  }
+
+  .hero-content .normal-cursive {
+    font-size: 92px;
+  }
+
+  .contact-container {
+    max-width: 1100px;
+  }
+
+  .left-panel {
+    padding: 45px 110px 45px 45px;
+  }
+
+  .info-card {
+    width: 400px;
+  }
+}
+
+/* Ensure form maintains original styling */
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .contact-container {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .left-panel {
+    border-radius: 5px;
+    background: var(--midnightorchid);
+  }
+
+  .input-group input:focus,
+  .input-group textarea:focus {
+    outline: 2px solid var(--botanicalgreen);
+  }
+
+  /* Keep the card overlay effect */
+  .info-card {
+    border-radius: 10px;
+    background: var(--lightpurple);
+    position: relative;
+    z-index: 3;
+  }
+
+  .info-card ul li svg path {
+    stroke: var(--botanicalgreen);
+  }
+
+  /* Maintain hover effects */
+  .submit-btn:hover {
+    background-color: var(--lightpurple);
+    color: var(--midnightorchid);
+  }
+
+  /* Ensure decorative lines are visible */
+  .horizontal-line,
+  .vertical-line,
+  .flower-container {
+    opacity: 1;
+  }
+}
+
+/* For very wide screens within range */
+@media (min-width: 1350px) and (max-width: 1400px) {
+  .contact-container {
+    max-width: 1300px;
+  }
+
+  .left-panel {
+    padding: 55px 130px 55px 55px;
+  }
+
+  .info-card {
+    width: 440px;
+  }
+}
