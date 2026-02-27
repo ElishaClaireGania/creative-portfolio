@@ -505,7 +505,6 @@ summary::-webkit-details-marker {
 /* LINE DIVIDER */
 .line-divider {
   background-color: var(--lightpurple);
-  display: block;
   width: 100%;
   height: 1px;
   margin-top: -50px;
@@ -1239,18 +1238,42 @@ summary::-webkit-details-marker {
   }
 
   .softskill-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .softskill-header p {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .soft-start p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .soft-start h2,
+  .technical-start h2 {
     font-size: 36px;
+  }
+
+  .soft-start .cursive,
+  .technical-start .cursive {
+    font-size: 52px;
   }
 
   .technical-start {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 5px;
   }
 
   .technical-start p {
+    font-size: 16px;
     text-align: left;
     width: 100%;
+    margin: 0;
   }
 
   .frontend-lists,
@@ -1258,40 +1281,44 @@ summary::-webkit-details-marker {
   .design-lists {
     grid-template-columns: 1fr 1fr;
     gap: 60px 40px;
+    margin-bottom: 20px;
   }
 
   .frontend-skill,
   .backend-skill,
   .design-skill {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 20px;
   }
 
   .frontend-skill img,
   .backend-skill img,
   .design-skill img {
-    margin-left: 0;
-    align-self: flex-start;
     width: 100px;
-    height: auto;
+    height: 100px;
+    margin-left: 0;
+    position: static;
+    transform: none;
+    display: block;
   }
 
-  .line-divider {
-    grid-column: 1 / -1;
-    margin-top: -50px !important;
-    margin-bottom: 0px;
-    height: 1px;
-    background-color: var(--lightpurple);
-    display: block;
-    width: 100%;
+  .frontend-skill p,
+  .backend-skill p,
+  .design-skill p {
+    font-size: 18px;
+    font-weight: 600;
   }
 
   .frontend-lists h3,
   .backend-lists h3,
   .design-lists h3 {
     grid-column: 1 / -1;
-    font-size: 32px;
-    margin-bottom: 0px;
+    font-size: 24px;
+    margin-bottom: 0;
   }
 
   .newsletter-start {
@@ -1307,7 +1334,7 @@ summary::-webkit-details-marker {
     display: inline-flex;
     align-items: baseline;
     gap: 10px;
-    font-size: 45px;
+    font-size: 48px;
     margin: 0;
     white-space: nowrap;
   }
@@ -1320,7 +1347,7 @@ summary::-webkit-details-marker {
   }
 
   .newsletter-start .cursive {
-    font-size: 80px;
+    font-size: 56px;
     margin-top: -10px;
   }
 

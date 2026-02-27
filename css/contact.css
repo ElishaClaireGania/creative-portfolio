@@ -646,14 +646,13 @@
 
   .left-panel h3 {
     font-size: 32px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
   }
 
   .contact-cursive {
-    font-size: 48px;
-    text-align: center;
-    display: block;
+    font-size: 50px;
+    text-align: left;
   }
 
   .form-row {
@@ -896,7 +895,7 @@
 
   .left-panel h3,
   .contact-cursive {
-    text-align: center;
+    text-align: left;
   }
 
   .flower-container {
