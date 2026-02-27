@@ -1138,7 +1138,6 @@ summary::-webkit-details-marker {
   }
 }
 
-/* Adjustments for the hero-bg positioning */
 @media (min-width: 1025px) and (max-width: 1400px) {
   .hero-bg {
     object-position: 25% center;

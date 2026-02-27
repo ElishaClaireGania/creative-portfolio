@@ -519,14 +519,12 @@
   }
 }
 
-/* Image positioning for contact page */
 @media (min-width: 1025px) and (max-width: 1400px) {
   .hero-bg {
-    object-position: 20% center; /* Keep face visible on left */
+    object-position: 20% center;
   }
 }
 
-/* Fine-tuning for specific ranges */
 @media (min-width: 1200px) and (max-width: 1300px) {
   .hero-content h1 {
     margin-right: 320px;
@@ -549,7 +547,6 @@
   }
 }
 
-/* Ensure form maintains original styling */
 @media (min-width: 1025px) and (max-width: 1400px) {
   .contact-container {
     margin: 0 auto;
@@ -567,7 +564,6 @@
     outline: 2px solid var(--botanicalgreen);
   }
 
-  /* Keep the card overlay effect */
   .info-card {
     border-radius: 10px;
     background: var(--lightpurple);
@@ -579,13 +575,11 @@
     stroke: var(--botanicalgreen);
   }
 
-  /* Maintain hover effects */
   .submit-btn:hover {
     background-color: var(--lightpurple);
     color: var(--midnightorchid);
   }
 
-  /* Ensure decorative lines are visible */
   .horizontal-line,
   .vertical-line,
   .flower-container {
@@ -593,7 +587,6 @@
   }
 }
 
-/* For very wide screens within range */
 @media (min-width: 1350px) and (max-width: 1400px) {
   .contact-container {
     max-width: 1300px;
