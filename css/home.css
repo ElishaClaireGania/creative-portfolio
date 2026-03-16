@@ -911,7 +911,6 @@
 @media (max-width: 1024px) and (min-width: 768px) {
   .hero-section img {
     object-position: 35% center;
-    filter: brightness(0.7);
   }
 
   .name-block {
@@ -985,7 +984,7 @@
 /* SMALL TABLET VIEW */
 @media (max-width: 900px) and (min-width: 768px) {
   .hero-section img {
-    object-position: 38% center;
+    object-position: 35% center;
   }
 
   .name-block {
@@ -1031,8 +1030,7 @@
 /* PHONE VIEW */
 @media (max-width: 767px) {
   .hero-section img {
-    object-position: 30% center;
-    filter: brightness(0.7);
+    object-position: 17% center;
   }
 
   .name-block {
@@ -1115,6 +1113,15 @@
 
 /* BRIDGE VIEW */
 @media (max-width: 660px) and (min-width: 481px) {
+  .hero-section .hero-bg {
+    object-position: 17% center;
+    object-fit: cover;
+  }
+
+  .name-block {
+    top: 50%;
+  }
+
   .name-block,
   .home-content {
     left: 50% !important;
@@ -1125,6 +1132,7 @@
   .home-content p {
     text-align: center !important;
     margin: 0 auto;
+    bottom: 50px;
   }
 
   .project-btn button {
