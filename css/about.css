@@ -194,7 +194,7 @@
 
 .left-box {
   width: 300px;
-  height: 328px;
+  height: 330px;
   align-self: flex-end;
 }
 
@@ -206,7 +206,7 @@
 
 .right-box {
   width: 300px;
-  height: 328px;
+  height: 330px;
   align-self: flex-start;
 }
 
@@ -219,6 +219,9 @@
   margin-top: 100px;
   padding-bottom: 150px;
   width: 100%;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .small-box {
@@ -227,7 +230,49 @@
   border: var(--botanicalgreen) 3px solid;
   border-radius: 7px;
   transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.small-box img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.b1 img {
+  object-fit: contain;
+  background-color: var(--lightpurple);
+}
+
+.b2 img {
+  object-fit: contain;
+  background-color: var(--lightpurple);
+}
+
+.b3 {
+  overflow: hidden;
+}
+
+.b3 img {
+  object-fit: cover;
+  transform: scale(1.1);
+}
+
+.b4 img {
+  object-fit: contain;
+  background-color: var(--lightpurple);
+}
+
+.b5 img {
+  object-fit: contain;
+  background-color: var(--lightpurple);
+}
+
+.small-box:hover {
+  transform: scale(1.02);
+  z-index: 10;
 }
 
 .b1,
@@ -242,6 +287,7 @@
   transform: rotate(-9deg) translateY(-40px);
   object-fit: cover;
 }
+
 /* TEXT */
 .elisha-title {
   position: absolute;
@@ -286,7 +332,7 @@
 
 /* ============ SOFT SKILLS ============ */
 .softskills-wrapper {
-  background-color: var(--midnightorchid);
+  background-color: var(--botanicalgreen);
   color: var(--lightpurple);
   padding: 100px 7%;
   display: flex;
@@ -392,14 +438,14 @@ summary::-webkit-details-marker {
 }
 
 .softskill-item[open] .line-separator {
-  background-color: var(--irismist);
+  background-color: var(--plumblossom);
   height: 3px;
   transform: scaleX(1.02);
   box-shadow: 0 0 15px rgba(184, 163, 194, 0.5);
 }
 
 .softskill-item:hover .line-separator {
-  background-color: var(--duskylilac);
+  background-color: var(--plumblossom);
   transform: scaleX(1.02);
 }
 
@@ -463,7 +509,6 @@ summary::-webkit-details-marker {
   }
 }
 
-/* Add subtle hover effect on the entire item */
 .softskill-item:hover {
   transform: translateX(5px);
 }
@@ -485,7 +530,7 @@ summary::-webkit-details-marker {
 
 /* ============ TECHNICAL SKILLS ============ */
 .technicalskills-wrapper {
-  background-color: var(--botanicalgreen);
+  background-color: var(--midnightorchid);
   color: var(--lightpurple);
   padding: 100px 7%;
   width: 100%;
@@ -575,7 +620,7 @@ summary::-webkit-details-marker {
   transform: translateY(-50%);
   width: 22px;
   height: 22px;
-  background-color: var(--botanicalgreen);
+  background-color: var(--midnightorchid);
   border: 3px solid var(--lightpurple);
   border-radius: 50%;
   z-index: 5;
@@ -842,14 +887,41 @@ summary::-webkit-details-marker {
   }
 
   .collage-container {
-    gap: 50px;
-    margin-top: 80px;
-    padding-bottom: 120px;
+    gap: 30px;
+    margin-top: 60px;
+    padding-bottom: 100px;
+    max-width: 1100px;
   }
 
   .small-box {
-    width: 260px;
-    height: 300px;
+    width: 220px;
+    height: 260px;
+  }
+
+  .small-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .b1 img,
+  .b2 img,
+  .b3 img,
+  .b4 img,
+  .b5 img {
+    object-fit: contain;
+    background-color: var(--lightpurple);
+  }
+
+  .b1,
+  .b3,
+  .b5 {
+    transform: rotate(-7deg) translateY(30px);
+  }
+
+  .b2,
+  .b4 {
+    transform: rotate(-7deg) translateY(-30px);
   }
 
   .elisha-title {
@@ -1229,7 +1301,7 @@ summary::-webkit-details-marker {
   }
 
   .left-heading {
-    font-size: 72px;
+    font-size: 76px;
     padding: 0;
     margin: 0;
     line-height: 0.9;
@@ -1240,10 +1312,10 @@ summary::-webkit-details-marker {
   .big-cursive {
     font-family: var(--maincursive);
     color: var(--lightpurple);
-    font-size: 115px;
+    font-size: 120px;
     position: absolute;
-    bottom: -80px;
-    right: -270px;
+    bottom: -90px;
+    right: -300px;
     margin: 0;
     line-height: 0.9;
     white-space: nowrap;
@@ -1472,5 +1544,600 @@ summary::-webkit-details-marker {
 
   .newsletter-wrapper .input-group {
     width: 100%;
+  }
+}
+
+/* SMALL TABLET VIEW */
+@media (max-width: 900px) and (min-width: 768px) {
+  .hero-bio {
+    width: 220px;
+    padding: 20px;
+    top: 20px;
+  }
+
+  .hero-bio p {
+    font-size: 14px;
+  }
+
+  .hero-main-title {
+    top: 65%;
+  }
+
+  .left-heading {
+    font-size: 70px;
+  }
+
+  .big-cursive {
+    font-size: 110px;
+    bottom: -90px;
+    right: -270px;
+  }
+
+  .hero-tagline {
+    top: 75%;
+  }
+
+  .hero-tagline p {
+    font-size: 16px;
+  }
+
+  .small-cursive {
+    font-size: 24px;
+  }
+
+  .indent-code {
+    margin-left: 45px;
+  }
+
+  .main-images-container {
+    height: 380px;
+    gap: 15px;
+  }
+
+  .left-box,
+  .right-box {
+    width: 150px;
+    height: 180px;
+  }
+
+  .middle-box {
+    width: 270px;
+    height: 380px;
+  }
+
+  .elisha-title {
+    font-size: 55px;
+    top: 22%;
+  }
+
+  .claire-title {
+    font-size: 85px;
+    bottom: 12%;
+  }
+
+  .collage-container {
+    gap: 15px;
+  }
+
+  .small-box {
+    height: 170px;
+  }
+
+  .softskill-header h2 {
+    font-size: 24px;
+  }
+
+  .softskill-header p {
+    font-size: 20px;
+  }
+
+  .soft-start h2,
+  .technical-start h2 {
+    font-size: 32px;
+  }
+
+  .soft-start .cursive,
+  .technical-start .cursive {
+    font-size: 46px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .frontend-lists h3,
+  .backend-lists h3,
+  .design-lists h3 {
+    font-size: 22px;
+  }
+
+  .leftside,
+  .rightside {
+    font-size: 14px;
+  }
+
+  .newsletter-start h1 {
+    font-size: 36px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 46px;
+  }
+
+  .newsletter-start svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cursive-button {
+    font-size: 22px;
+  }
+}
+
+/* PHONE VIEW */
+@media (max-width: 767px) {
+  /* Hero Section */
+  .hero-bg {
+    object-position: 30% center;
+  }
+
+  .hero-bio {
+    top: 20px;
+    right: 5%;
+    width: 200px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .hero-bio p {
+    font-size: 14px;
+  }
+
+  .hero-main-title {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .left-heading {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .big-cursive {
+    font-size: 70px;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: -10px;
+    margin-left: 0;
+    display: block;
+  }
+
+  .hero-tagline {
+    position: absolute;
+    top: 72%;
+    left: 5%;
+  }
+
+  .hero-tagline p {
+    font-size: 16px;
+  }
+
+  .small-cursive {
+    font-size: 24px;
+  }
+
+  .indent-code {
+    margin-left: 40px;
+  }
+
+  /* About Section */
+  .about-me {
+    padding: 40px 5%;
+  }
+
+  .main-images-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .left-box,
+  .middle-box,
+  .right-box {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1/1;
+    align-self: center;
+  }
+
+  .middle-box {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .elisha-title {
+    font-size: 42px;
+    top: 15%;
+    left: 2%;
+  }
+
+  .claire-title {
+    font-size: 60px;
+    bottom: 10%;
+    right: 2%;
+  }
+
+  .about-text-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+
+  /* Collage Section */
+  .collage-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .small-box {
+    width: 100%;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .b1,
+  .b2,
+  .b3,
+  .b4,
+  .b5 {
+    transform: none;
+  }
+
+  /* Soft Skills */
+  .softskills-wrapper {
+    padding: 60px 5%;
+  }
+
+  .soft-start {
+    margin-bottom: 40px;
+  }
+
+  .soft-start h2 {
+    font-size: 32px;
+  }
+
+  .soft-start .cursive {
+    font-size: 48px;
+  }
+
+  .soft-start p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .soft-skills {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .softskill-item {
+    margin-bottom: 20px;
+  }
+
+  .softskill-header {
+    gap: 10px;
+  }
+
+  .softskill-header h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .softskill-header p {
+    font-size: 20px;
+  }
+
+  .softskill-content {
+    padding-left: 35px;
+    font-size: 15px;
+  }
+
+  /* Technical Skills */
+  .technicalskills-wrapper {
+    padding: 60px 5%;
+    gap: 30px;
+  }
+
+  .technical-start {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 30px;
+  }
+
+  .technical-start h2 {
+    font-size: 32px;
+  }
+
+  .technical-start .cursive {
+    font-size: 48px;
+  }
+
+  .technical-start p {
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .frontend-lists,
+  .backend-lists,
+  .design-lists {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .frontend-lists h3,
+  .backend-lists h3,
+  .design-lists h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .frontend-skill,
+  .backend-skill,
+  .design-skill {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  .skill-content {
+    flex: 1;
+  }
+
+  .skill-info p {
+    font-size: 16px;
+  }
+
+  .leftside,
+  .rightside {
+    font-size: 16px;
+  }
+
+  .slider {
+    height: 12px;
+  }
+
+  .slider-fill::after {
+    width: 16px;
+    height: 16px;
+    right: -6px;
+  }
+
+  .line-divider {
+    margin-top: -20px;
+  }
+
+  /* Newsletter */
+  .newsletter-wrapper {
+    padding: 40px 5% 60px 5%;
+  }
+
+  .newsletter-start {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+
+  .newsletter-start h1 {
+    font-size: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 42px;
+  }
+
+  .newsletter-start svg {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .newsletter-wrapper form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .newsletter-wrapper input {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+
+  .newsletter-wrapper input::placeholder {
+    font-size: 13px;
+  }
+
+  .newsletter-wrapper button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 5px;
+  }
+
+  .cursive-button {
+    font-size: 22px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px 5%;
+    font-size: 14px;
+  }
+
+  #scrollToTop {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* SMALL PHONE VIEW */
+@media (max-width: 480px) {
+  .hero-bio {
+    width: 160px;
+    padding: 15px;
+  }
+
+  .hero-bio p {
+    font-size: 12px;
+  }
+
+  .left-heading {
+    font-size: 40px;
+  }
+
+  .big-cursive {
+    font-size: 60px;
+    margin-top: -5px;
+  }
+
+  .hero-tagline p {
+    font-size: 14px;
+  }
+
+  .small-cursive {
+    font-size: 20px;
+  }
+
+  .indent-code {
+    margin-left: 30px;
+  }
+
+  .elisha-title {
+    font-size: 36px;
+  }
+
+  .claire-title {
+    font-size: 50px;
+  }
+
+  .small-box {
+    height: 240px;
+  }
+
+  .soft-start h2 {
+    font-size: 28px;
+  }
+
+  .soft-start .cursive {
+    font-size: 42px;
+  }
+
+  .softskill-header h2 {
+    font-size: 22px;
+  }
+
+  .softskill-header p {
+    font-size: 18px;
+  }
+
+  .frontend-skill img,
+  .backend-skill img,
+  .design-skill img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .newsletter-start h1 {
+    font-size: 28px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 36px;
+  }
+
+  .cursive-button {
+    font-size: 20px;
+  }
+
+  .newsletter-wrapper button {
+    padding: 10px 15px;
+  }
+}
+
+/* EXTRA SMALL PHONE */
+@media (max-width: 360px) {
+  .left-heading {
+    font-size: 36px;
+  }
+
+  .big-cursive {
+    font-size: 54px;
+  }
+
+  .elisha-title {
+    font-size: 32px;
+  }
+
+  .claire-title {
+    font-size: 44px;
+  }
+
+  .soft-start h2 {
+    font-size: 24px;
+  }
+
+  .soft-start .cursive {
+    font-size: 38px;
+  }
+
+  .softskill-header h2 {
+    font-size: 20px;
+  }
+
+  .softskill-header p {
+    font-size: 16px;
+  }
+
+  .newsletter-start h1 {
+    font-size: 24px;
+  }
+
+  .newsletter-start .cursive {
+    font-size: 32px;
+  }
+
+  .cursive-button {
+    font-size: 18px;
   }
 }
