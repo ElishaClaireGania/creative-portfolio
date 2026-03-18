@@ -1203,7 +1203,7 @@
 }
 
 /* EXTRA SMALL PHONE */
-@media (max-width: 360px) {
+@media (max-width: 479px) and (min-width: 360px) {
   .hero-section .hero-bg {
     object-position: 15% center;
     object-fit: cover;
@@ -1213,7 +1213,7 @@
     left: 50%;
     max-width: 400px;
     padding: 12px;
-    top: 300px;
+    top: 350px;
   }
 
   .bold-name {
