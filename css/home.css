@@ -1225,7 +1225,7 @@
 
   .home-content {
     left: 50%;
-    bottom: 30px;
+    bottom: 50px;
     max-width: 350px;
   }
 
@@ -1237,9 +1237,9 @@
   .project-btn button {
     width: 100px;
     height: 40px;
-    top: 15px;
+    top: 0;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: 0 auto;
   }
 }
