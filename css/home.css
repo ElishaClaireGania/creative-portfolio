@@ -1205,15 +1205,14 @@
 /* EXTRA SMALL PHONE */
 @media (max-width: 479px) and (min-width: 360px) {
   .hero-section .hero-bg {
-    object-position: 15% center;
-    object-fit: cover;
+    object-position: 17% center;
   }
 
   .name-block {
     left: 50%;
     max-width: 300px;
     padding: 12px;
-    top: 30px;
+    top: 310px;
   }
 
   .bold-name {
