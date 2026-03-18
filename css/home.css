@@ -1211,17 +1211,17 @@
 
   .name-block {
     left: 50%;
-    max-width: 400px;
+    max-width: 300px;
     padding: 12px;
     top: 310px;
   }
 
   .bold-name {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   .cursive-name {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .home-content {
