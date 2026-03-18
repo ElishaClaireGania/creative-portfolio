@@ -1088,47 +1088,277 @@
 /* PHONE VIEW */
 @media (max-width: 767px) {
   /* Hero Section */
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    position: relative;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+
   .hero-overlay {
-    padding: 15% 5% 5% 5%;
+    position: relative;
+    padding: 80px 15px 50px 15px;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: center;
+    height: auto;
+    min-height: 100vh;
+    gap: 25px;
+    box-sizing: border-box;
+    z-index: 2;
   }
 
   .hero-content {
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 0;
     text-align: center;
+    z-index: 2;
+    flex: none;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    margin-left: 0;
+    margin-right: 0 !important;
     width: 100%;
-    margin: 0;
     text-align: center;
   }
 
   .hero-content .normal-cursive {
-    font-size: 60px;
+    font-size: 48px;
     line-height: 1;
     display: inline-block;
+    margin: 0;
   }
 
   .hero-content p {
-    font-size: 15px;
-    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Right Panel Card */
+  .rightpanel {
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .smallwork-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    max-height: none;
+    padding: 18px 15px;
+    overflow: visible;
+    margin: 0 auto;
+  }
+
+  .smallwork-card img {
+    max-width: 300px;
+    margin: 0 auto 12px;
+    border-radius: 8px;
+  }
+
+  .smallwork-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .smallwork-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-footer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .smallwork-card .button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    margin-bottom: 5px;
+  }
+
+  .smallwork-card .button-group button {
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+    flex: 0 1 auto;
+  }
+
+  .smallwork-card a {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* Projects Section */
+  .projects-wrapper {
+    padding: 40px 5%;
+  }
+
+  .projects-wrapper h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .projects-wrapper .cursive {
+    font-size: 42px;
+    display: inline;
+    text-align: left;
+  }
+
+  .project-wrapper {
+    padding: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  .project-content {
+    flex-direction: column !important;
+    gap: 15px;
+  }
+
+  .image-container {
+    max-height: 180px;
+    width: 100%;
+  }
+
+  .project-content h3 {
+    font-size: 18px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  .project-content p {
+    font-size: 13px;
+    padding-bottom: 12px;
+    text-align: center;
     line-height: 1.5;
-    margin: 10px 0 0;
+  }
+
+  .project-content .tools-pill {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .project-content .pill {
+    width: 80px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .buttons button {
+    width: 100px;
+    height: 34px;
+    font-size: 12px;
+    flex: 0 1 auto;
+  }
+}
+/* BRIDGE VIEW */
+@media (max-width: 660px) and (min-width: 481px) {
+  /* Hero Section */
+  .hero-content {
+    margin: 50px auto 0 auto;
+
+    text-align: center;
+    z-index: 2;
+    flex: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: 0;
+    margin-right: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-content .normal-cursive {
+    font-size: 36px;
+    line-height: 1;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
 
@@ -1142,65 +1372,75 @@
   }
 
   .smallwork-card {
-    max-width: 100%;
-    margin: 0;
+    max-width: 400px;
+    width: 90%;
+    padding: 25px 20px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px;
-    gap: 15px;
   }
 
   .smallwork-card img {
+    max-width: 300px;
     width: 100%;
-    max-width: 250px;
     height: auto;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-    object-fit: cover;
-    margin: 0 auto;
+    margin: 0 auto 5px;
+    border-radius: 8px;
   }
 
   .card-content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .smallwork-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 5px 0;
+    text-align: center;
   }
 
   .smallwork-card p {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .card-footer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
     width: 100%;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
   }
 
   .smallwork-card .button-group {
-    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 0;
+
+    width: 100%;
   }
 
   .smallwork-card .button-group button {
-    width: 70px;
+    width: 80px;
     height: 32px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .smallwork-card a {
     font-size: 14px;
-    text-align: center;
   }
 
   /* Projects Section */
@@ -1209,20 +1449,20 @@
   }
 
   .projects-wrapper h2 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 34px;
+    text-align: left;
     margin-bottom: 5px;
   }
 
   .projects-wrapper .cursive {
     font-size: 48px;
-    display: block;
-    text-align: center;
+    display: inline;
+    text-align: left;
   }
 
   .project-wrapper {
+    padding: 20px;
     margin-top: 25px;
-    padding: 15px;
   }
 
   .project-content {
@@ -1230,20 +1470,10 @@
     gap: 20px;
   }
 
-  .project-content > div {
-    width: 100%;
-  }
-
   .image-container {
-    max-width: 100%;
-    max-height: 280px;
-    border-radius: 5px;
-  }
-
-  .image-container img {
+    max-height: 220px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 0 auto;
   }
 
   .project-content h3 {
@@ -1253,75 +1483,146 @@
   }
 
   .project-content p {
-    font-size: 15px;
+    font-size: 14px;
     padding-bottom: 15px;
-    line-height: 1.5;
     text-align: center;
+    line-height: 1.5;
   }
 
   .project-content .tools-pill {
-    gap: 8px;
-    margin-top: 10px;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .project-content .pill {
     width: 90px;
-    height: 32px;
+    height: 28px;
     font-size: 12px;
   }
 
   .buttons {
-    gap: 10px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
   }
 
   .buttons button {
-    width: 120px;
-    height: 38px;
+    width: 115px;
+    height: 36px;
     font-size: 14px;
-  }
-
-  .buttons button svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .projects-wrapper > p {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: 30px;
-    text-align: center;
   }
 }
 
 /* SMALL PHONE VIEW */
 @media (max-width: 480px) {
+  .hero-overlay {
+    padding: 70px 12px 40px 12px;
+  }
+
+  .hero-content {
+    margin: 30px auto 0 auto;
+  }
+
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 22px;
+    gap: 6px;
+  }
+
+  .hero-content .normal-cursive {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .smallwork-card {
+    max-width: 300px;
+    padding: 15px 12px;
+  }
+
+  .smallwork-card img {
+    max-width: 270px;
+  }
+
+  .smallwork-card h3 {
+    font-size: 17px;
+  }
+
+  .smallwork-card p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .smallwork-card .button-group button {
+    width: 65px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .projects-wrapper h2 {
+    font-size: 26px;
+  }
+
+  .projects-wrapper .cursive {
+    font-size: 38px;
+  }
+
+  .project-content h3 {
+    font-size: 17px;
+  }
+
+  .project-content .pill {
+    width: 75px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .buttons button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+/* EXTRA SMALL PHONE */
+@media (max-width: 479px) and (min-width: 360px) {
+  .hero-overlay {
+    padding: 30px 10px 35px 10px;
+  }
+
+  .hero-content {
+    margin: 100px auto 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
     gap: 5px;
   }
 
   .hero-content .normal-cursive {
-    font-size: 50px;
+    font-size: 38px;
   }
 
   .hero-content p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .smallwork-card {
-    padding: 15px;
+    max-width: 300px;
+    padding: 10px 10px;
   }
 
   .smallwork-card img {
-    max-width: 200px;
+    max-width: 270px;
   }
 
   .smallwork-card h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .smallwork-card p {
@@ -1329,77 +1630,30 @@
   }
 
   .smallwork-card .button-group button {
-    width: 65px;
-    height: 30px;
-    font-size: 15px;
-  }
-
-  .projects-wrapper h2 {
-    font-size: 28px;
-  }
-
-  .projects-wrapper .cursive {
-    font-size: 42px;
-  }
-
-  .project-content h3 {
-    font-size: 20px;
-  }
-
-  .project-content p {
-    font-size: 14px;
-  }
-
-  .project-content .pill {
-    width: 80px;
-    height: 30px;
+    width: 60px;
+    height: 26px;
     font-size: 11px;
   }
 
-  .buttons button {
-    width: 110px;
-    height: 36px;
-    font-size: 13px;
-  }
-}
-
-/* EXTRA SMALL PHONE */
-@media (max-width: 360px) {
-  .hero-content h1 {
-    font-size: 24px;
-  }
-
-  .hero-content .normal-cursive {
-    font-size: 42px;
-  }
-
-  .hero-content p {
-    font-size: 13px;
-  }
-
-  .smallwork-card img {
-    max-width: 180px;
+  .smallwork-card a {
+    font-size: 11px;
   }
 
   .projects-wrapper h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .projects-wrapper .cursive {
-    font-size: 36px;
-  }
-
-  .project-content h3 {
-    font-size: 18px;
+    font-size: 32px;
   }
 
   .buttons {
-    flex-direction: column;
-    align-items: center;
+    gap: 6px;
   }
 
   .buttons button {
-    width: 100%;
-    max-width: 150px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
   }
 }

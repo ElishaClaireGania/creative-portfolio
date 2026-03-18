@@ -826,51 +826,62 @@
 /* PHONE VIEW */
 @media (max-width: 767px) {
   /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .hero-overlay {
-    padding: 20% 5% 10% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 55% 8% 10% 8%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    box-sizing: border-box;
   }
 
   .hero-content {
-    margin-right: 0;
-    margin-bottom: 30px;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     width: 100%;
+    max-width: none;
+    z-index: 10;
   }
 
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 32px;
     margin-right: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    text-align: left;
+    display: inline;
   }
 
   .hero-content .normal-cursive {
-    font-size: 60px;
-    display: block;
-    margin-top: -5px;
+    font-size: 58px;
+    display: inline;
+    text-align: left;
+    margin-top: 0;
   }
 
   .hero-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    max-width: 100%;
-    margin-top: 15px;
-    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 75%;
+    margin-top: 10px;
+    text-align: left;
   }
 
   /* Decorative Lines */
   .vertical-line {
-    right: 15%;
+    right: 25%;
   }
 
   .flower-container {
-    right: 15%;
+    right: 25%;
     top: 52%;
   }
 
@@ -942,43 +953,48 @@
     font-size: 16px;
   }
 
-  /* Right Panel */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5%;
+    gap: 30px;
+  }
+
+  /* Left Panel (Form) */
+  .left-panel {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+
   .right-panel {
     margin-left: 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   .info-card {
-    width: 100%;
-    padding: 25px 20px;
-    box-shadow: 0 15px 30px rgba(57, 35, 71, 0.25);
-    margin-top: 0;
-    margin-bottom: 0;
+    flex: 1 1 280px;
+    min-width: 280px;
+    width: auto;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 10px 25px rgba(57, 35, 71, 0.2);
   }
 
   .info-card h4 {
-    font-size: 22px;
-    text-align: left;
-    margin-bottom: 15px;
-  }
-
-  .info-card ul {
-    padding: 0;
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .info-card ul li {
     font-size: 14px;
-    gap: 12px;
-    padding-bottom: 0;
-    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 10px;
   }
 
   .info-card ul li svg {
@@ -1001,26 +1017,76 @@
 
 /* SMALL PHONE VIEW */
 @media (max-width: 480px) {
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 85% 8% 10% 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    max-width: none;
+    z-index: 10;
+  }
+
   .hero-content h1 {
-    font-size: 30px;
+    font-size: 32px;
+    margin-right: 0;
+    text-align: left;
+    display: inline;
   }
 
   .hero-content .normal-cursive {
-    font-size: 50px;
+    font-size: 58px;
+    display: inline;
+    text-align: left;
+    margin-top: 0;
   }
 
   .hero-content p {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 75%;
+    margin-top: 10px;
+    text-align: left;
   }
 
+  /* Decorative Lines */
   .vertical-line {
-    right: 12%;
+    right: 23%;
   }
 
   .flower-container {
-    right: 12%;
+    right: 23%;
+    top: 52%;
   }
 
+  .flower-container svg {
+    width: 35px;
+    height: 38px;
+  }
+
+  .horizontal-line {
+    top: 52%;
+  }
+
+  /* Left panel */
   .left-panel {
     padding: 25px 15px;
   }
@@ -1043,6 +1109,7 @@
     font-size: 14px;
   }
 
+  /* Right panel */
   .info-card {
     padding: 20px 15px;
   }
@@ -1068,15 +1135,77 @@
 }
 
 /* EXTRA SMALL PHONE */
-@media (max-width: 360px) {
+@media (max-width: 479px) and (min-width: 360px) {
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 370px 8% 10% 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    max-width: none;
+    z-index: 10;
+  }
+
   .hero-content h1 {
-    font-size: 26px;
+    font-size: 32px;
+    margin-right: 0;
+    text-align: left;
+    display: inline;
   }
 
   .hero-content .normal-cursive {
-    font-size: 42px;
+    font-size: 58px;
+    display: block;
+    text-align: left;
+    margin-top: 0;
   }
 
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 75%;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  /* Decorative Lines */
+  .vertical-line {
+    right: 23%;
+  }
+
+  .flower-container {
+    right: 23%;
+    top: 52%;
+  }
+
+  .flower-container svg {
+    width: 35px;
+    height: 38px;
+  }
+
+  .horizontal-line {
+    top: 52%;
+  }
+
+  /* Left panel */
   .left-panel h3 {
     font-size: 22px;
   }

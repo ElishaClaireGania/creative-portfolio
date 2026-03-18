@@ -681,6 +681,10 @@ main > section {
     transition: all 0.3s ease;
   }
 
+  .link {
+    margin-left: 10px;
+  }
+
   .menu-overlay {
     position: fixed;
     top: 0;
@@ -717,8 +721,9 @@ main > section {
     align-items: flex-start;
     gap: 1.2rem;
     width: 100%;
-    margin: 50px 0 -70px 0;
+    margin: 50px 0 10px 0;
     padding: 0;
+    list-style: none;
   }
 
   .nav-links > ul li {
@@ -800,10 +805,10 @@ main > section {
     border: none;
     padding: 0;
     width: 100%;
-    margin: 5px 0 10px 0;
+    margin: 0;
     position: relative;
-    bottom: auto;
-    left: auto;
+    bottom: 80px;
+    left: 10px;
   }
 
   .nav-links .social-links-permanent ul {
@@ -930,7 +935,7 @@ main > section {
   /* Navigation */
   nav {
     height: 80px;
-    padding: 0 5%;
+    padding: 50px 0 0 5% 0%;
   }
 
   .logo-link img {
@@ -1024,12 +1029,16 @@ main > section {
     transform: scale(0);
   }
 
-  /* Side Panel - FIXED FOR PHONE */
+  .link {
+    margin-left: 10px;
+  }
+
+  /* Side Panel */
   .nav-links {
     position: fixed;
-    right: -280px; /* Changed from -340px to -280px */
+    right: -280px;
     top: 0;
-    width: 280px; /* Slightly smaller width for phone */
+    width: 280px;
     height: 100vh;
     background: rgba(57, 35, 71, 0.85);
     backdrop-filter: blur(15px);
@@ -1038,7 +1047,7 @@ main > section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 100px 20px 20px 25px; /* Reduced padding */
+    padding: 100px 20px 20px 25px;
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2000;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
@@ -1054,21 +1063,21 @@ main > section {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem; /* Reduced gap */
+    gap: 1rem;
     width: 100%;
-    margin: 30px 0 20px 0; /* Adjusted margin */
+    margin: 30px 0 20px 0;
     padding: 0;
     list-style: none;
   }
 
   .nav-links > ul li a {
-    font-size: 22px; /* Slightly smaller font */
+    font-size: 22px;
     font-weight: 600;
     color: var(--lightpurple);
-    font-family: "Raleway", sans-serif;
+    font-family: var(--bodytext_buttons);
     text-decoration: none;
     transition: all 0.3s ease;
-    padding: 5px 0; /* Added padding for better touch target */
+    padding: 5px 0;
     display: block;
   }
 
@@ -1086,6 +1095,35 @@ main > section {
       var(--midnightorchid) 100%
     );
     opacity: 0.8;
+  }
+
+  .nav-links .social-links-permanent {
+    border: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+  }
+
+  .nav-links .social-links-permanent ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.8rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-links-permanent::before {
+    content: "✦ ✦ ✦";
+    position: relative;
+    bottom: 12px;
+    right: -5px;
+    color: var(--lightpurple);
+    font-size: 12px;
+    letter-spacing: 4px;
+    pointer-events: none;
   }
 
   /* Menu Overlay */
@@ -1140,6 +1178,54 @@ main > section {
   footer {
     padding: 15px 5%;
     font-size: 14px;
+  }
+}
+
+/* BRIDGE VIEW  */
+@media (max-width: 660px) and (min-width: 481px) {
+  nav {
+    height: 90px;
+    padding: 0 5%;
+  }
+
+  .logo-link img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .menu-toggle {
+    display: grid !important;
+    width: 50px;
+    height: 50px;
+    padding: 9px;
+  }
+
+  .nav-links {
+    width: 300px;
+    right: -320px;
+    padding: 110px 25px 20px 35px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links > ul li a {
+    font-size: 24px;
+    padding: 8px 0;
+  }
+
+  .nav-links .social-links-permanent ul {
+    gap: 2rem;
+  }
+
+  .loading-progress {
+    width: 240px;
+  }
+
+  .flower-spin {
+    width: 70px;
+    height: 75px;
   }
 }
 
@@ -1213,11 +1299,34 @@ main > section {
 }
 
 /* EXTRA SMALL PHONE */
-@media (max-width: 360px) {
+@media (max-width: 479px) and (min-width: 360px) {
+  nav {
+    padding-right: 5%;
+    padding-left: 2%;
+  }
+
   .menu-toggle {
     width: 44px;
     height: 44px;
     padding: 7px;
+  }
+
+  .nav-links .social-links-permanent {
+    border: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+  }
+
+  .nav-links .social-links-permanent ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.8rem;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-links {
@@ -1232,6 +1341,10 @@ main > section {
 
   .nav-links .social-links-permanent ul {
     gap: 1.2rem;
+  }
+
+  .logo-link img {
+    margin-left: 20px;
   }
 
   .loading-progress {

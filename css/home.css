@@ -707,7 +707,7 @@
 
 .home-content {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 72%;
   transform: translateX(-37%);
   width: 100%;
@@ -833,7 +833,7 @@
   .home-content {
     left: 75%;
     width: 500px;
-    bottom: -45px;
+    bottom: -40px;
   }
 
   .bold-name {
@@ -1014,7 +1014,7 @@
   }
 
   .home-content p {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .content-below {
@@ -1030,7 +1030,7 @@
 /* PHONE VIEW */
 @media (max-width: 767px) {
   .hero-section img {
-    object-position: 17% center;
+    object-position: 30% center;
   }
 
   .name-block {
@@ -1082,6 +1082,7 @@
     text-align: right;
     font-size: 14px;
     line-height: 1.5;
+    bottom: 10px;
     width: 100% !important;
   }
 
@@ -1114,17 +1115,17 @@
 /* BRIDGE VIEW */
 @media (max-width: 660px) and (min-width: 481px) {
   .hero-section .hero-bg {
-    object-position: 17% center;
+    object-position: 37% center;
     object-fit: cover;
   }
 
   .name-block {
-    top: 50%;
+    top: 25%;
   }
 
   .name-block,
   .home-content {
-    left: 50% !important;
+    left: 67% !important;
     max-width: 320px;
     text-align: center;
   }
@@ -1136,7 +1137,7 @@
   }
 
   .project-btn button {
-    left: 0 !important;
+    left: 80% !important;
     bottom: 0;
     margin: 0 auto;
     position: relative;
@@ -1150,13 +1151,19 @@
 
 /* SMALL PHONE VIEW */
 @media (max-width: 480px) {
+  .hero-section .hero-bg {
+    object-position: 10% center;
+    object-fit: cover;
+  }
+
   .name-block {
     left: 50%;
-    top: 25%;
+    top: 330px;
     max-width: 300px;
-    padding: 15px;
+    padding: 10px;
     align-items: center;
     text-align: center;
+    box-shadow: none;
   }
 
   .bold-name {
@@ -1169,9 +1176,9 @@
 
   .home-content {
     left: 50%;
-    bottom: 90px;
+    bottom: 35px;
     width: 85%;
-    max-width: 300px;
+    max-width: 350px;
   }
 
   .home-content p {
@@ -1183,6 +1190,7 @@
   .project-btn button {
     width: 100px;
     height: 40px;
+    top: 10px;
     left: 0;
     bottom: 0;
     margin: 0 auto;
@@ -1196,6 +1204,11 @@
 
 /* EXTRA SMALL PHONE */
 @media (max-width: 360px) {
+  .hero-section .hero-bg {
+    object-position: 15% center;
+    object-fit: cover;
+  }
+
   .name-block {
     left: 50%;
     max-width: 260px;
@@ -1212,12 +1225,21 @@
 
   .home-content {
     left: 50%;
-    bottom: 80px;
-    max-width: 240px;
+    bottom: 30px;
+    max-width: 350px;
   }
 
   .home-content p {
     font-size: 12px;
     line-height: 1.4;
+  }
+
+  .project-btn button {
+    width: 100px;
+    height: 40px;
+    top: 15px;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
   }
 }
